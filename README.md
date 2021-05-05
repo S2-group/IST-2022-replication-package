@@ -23,7 +23,7 @@ This replication package is organized according to the following structure:
     └── plots.ipynb: Jupyter Notebook file containing the Python code used to analyze the extracted data and generate the resulting plots.
 ```
 
-## How to cite this replication package
+## How to cite this work
 If the data or software contained in this replication package is helping your research, consider to cite it is as follows, thanks!
 
 ```
