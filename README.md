@@ -29,7 +29,7 @@ This replication package is organized according to the following structure:
 If the data or software contained in this replication package is helping your research, consider to cite it is as follows, thanks!
 
 ```
-@inproceedings{STJ_2022,
+@inproceedings{IST_2022,
   title={{Measurement-based Experiments on the Mobile Web: A Systematic Mapping Study}},
   author={Omar {de Munk}, Gian Luca Scoccia and Ivano Malavolta},
   journal={Information and Software Technology}
