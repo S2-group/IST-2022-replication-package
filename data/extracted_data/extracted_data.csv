@@ -1,98 +1,98 @@
-,Title,What is measured,code_measured,Used metrics,code_metrics,Replication package,code_reppackage,Data Analysis,code_dataanalysis,Platform,code_platform,Operating System,code_os,Browser,code_browser,Website Type,code_sitestype,WebSelection,code_sitessource,code_sitesingle,Websites provided,code_sitesprovided,Webhosting,code_siteshosted,Network Condition,code_networkcondition,Measurement tools,code_tools,Open Source Tools,Scope,code_scope,Main focus,code_focus,Caching,code_caching,Nr of webpages,code_nrsites,Repetitions,Main challenges,code_challenges
-ACM_SIGCOMM_CCR_2020,Mobile Web Browsing Under Memory Pressure,"Memory consumption of 5 different browsers.
-Speed","memconsum, speed","- PSS (Proportional Set Size)
+﻿PID;Year;Paper_ID;Title;What is measured;code_measured;Used metrics;code_metrics;Replication package;code_reppackage;Data Analysis;code_dataanalysis;Platform;code_platform;Operating System;code_os;code_os_no_emu;Browser;code_browser;code_browser_no_repetition;Website Type;code_sitestype;code_sitestype_single;WebSelection;code_sitessource;code_sitesingle;Websites provided;code_sitesprovided;Webhosting;code_siteshosted;Network Condition;code_networkcondition;code_networkcondition_simple;Measurement tools;code_tools;Open Source Tools;Scope;code_scope;Main focus;code_focus;Caching;code_caching;Nr of webpages;code_nrsites;code_nrsites_grouped;Repetitions;code_repetitions;Main challenges;code_challenges;;
+P1;2020;ACM_SIGCOMM_CCR_2020;Mobile Web Browsing Under Memory Pressure;"Memory consumption of 5 different browsers.
+Speed";memconsum, speed;"- PSS (Proportional Set Size)
 portion of memory
 occupied by a process and is composed of the private mem-
 ory of that process plus the proportion of shared memory
 with one or more other processes. (MB)
-- Page load time (PLT, secs)","memconsum/pss/ratio, speed/plt/s","Public repository:
+- Page load time (PLT, secs)";memconsum/pss/ratio, speed/plt/s;"Public repository:
 - all the code and data needed to reproduce
 the experiments described in this paper
 - tools we developed to the run the experiments, scripts for
 analysis and plotting of the generated data
 - Instructions how to use this.
-https://github.com/nsgLUMS/mobileLowMem",yes/code_data_instructions,Descriptive statistics,descstats,"Smartphone
+https://github.com/nsgLUMS/mobileLowMem";yes/instructions_data_code;Descriptive statistics;descstats;"Smartphone
 - Nokia 1, (1GB ram, 4core, 1.1Ghz, Mali-T720MP1 (600MHz) GPU)
 - Nexus 5, (2GB ram, 4core, 2.26Ghz, Adreno 330 (450MHz) GPU
 - Nexus 5X (2GB ram, 6core, 1.44-1.8Ghz, Adreno 418 (600MHz))
 - Nexus 6 (3GB ram, 4core, 2.7Ghz, Adreno 420 (600MHz) GPU)
 - Nexus 6P (3GB ram, 8core, 1.55-1.95Ghz, Adreno 430 (650MHz) GPU)
-",smartphone,"- Android 6 (6.0.1) (Marshmallow), 
+";smartphone;"- Android 6 (6.0.1) (Marshmallow), 
 - Android 7 (Nougat), and
 - Android 8 (Oreo)
 - Android 8.0.1 (Go edition)
 - userdebug build in An-
-droid.","adroid/4, adroid/5, adroid/6, adroid/6, adroid/go/8","- Chrome (81.0.4044.17)
+droid.";adroid/4, adroid/5, adroid/6, adroid/6, adroid/go/8;adroid/4, adroid/5, adroid/6, adroid/6, adroid/go/8;"- Chrome (81.0.4044.17)
 - Firefox (68.7.0)
 - Microsoft Edge (45.02.2.4931)
-- Brave (1.5.131 Chromium Build 80.0.3987.162).","chrome, firefox, other, other","- Real
-- Synthetic (to test image formats, resolutions, and nr)","real, synthetic","Alexa top 100
-Self created",alexa/top100,alexa,No,No,"Webpages are 
-hosted on a desktop",mirrored,"Desktop
+- Brave (1.5.131 Chromium Build 80.0.3987.162).";chrome, firefox, other, other;chrome, firefox, other;"- Real
+- Synthetic (to test image formats, resolutions, and nr)";real, synthetic;both;"Alexa top 100
+Self created";alexa/top100;alexa;No;No;"Webpages are 
+hosted on a desktop";mirrored;"Desktop
 Down: 30Mbps
-Up: 15Mbps",not provided,"- introduce memory pressure via a custom (native) Android app that
+Up: 15Mbps";not provided;not provided;"- introduce memory pressure via a custom (native) Android app that
 we built
 - WebpageReplay (part of telemtry)
 - WebPageTest: measuring Web page sizes and gathering other page specific statistics
 - Telemetry
 - Android Profiler of ADB logcat
-- Tracking PSS of apps using custom app","webservice/webpagetest, webpagereplay, custom, telemetry",Yes,"- Both page load 
-but also usage scenarios: scrolling and using multiple tabs",both,"All of them, also inspects effects os JS and IMG",all,"Disabled
+- Tracking PSS of apps using custom app";webservice/webpagetest, webpagereplay, custom, telemetry;Yes;"- Both page load 
+but also usage scenarios: scrolling and using multiple tabs";both;All of them, also inspects effects os JS and IMG;all;"Disabled
 ""We clear browser cache
-and cookies between any two page loads""",disabled,"100 from
-The 100 webpages from The Alexa top 100",100,10 runs,"- ALternatives to PLT such as the above-the-fold time (AFT) and speed index
+and cookies between any two page loads""";disabled;"100 from
+The 100 webpages from The Alexa top 100";100;<= 100;10 runs;10;"- ALternatives to PLT such as the above-the-fold time (AFT) and speed index
 [43] represent user-perceived page load times and measure
 the time it takes for the visible parts of a page to be displayed.
 However, they require screen/video recordings which can
 increase memory and CPU usage and thus confound the true
-memory consumption of mobile Web pages [22]",limitations of used metrics
-CODES_ISSS_2016,Web Browser Workload Characterization for Power Management on HMP Platforms,"Energy consumption
-",enerconsum,Joules,enerconsum/joules,No,no,"Descriptive statistics
-Mentions the word ""significant"" but no p-values are shown.",descstats,"Proxy for smartphone 
-- Odroid-XU3 board which features an Exynos5422 SoC (also used in Samsung Galaxy S5 phone)",smartphone,Android 4.4.4 KitKat,adroid/4/4.4,"A trimmed-down version of
+memory consumption of mobile Web pages [22]";limitations of used metrics;;
+P2;2016;CODES_ISSS_2016;Web Browser Workload Characterization for Power Management on HMP Platforms;"Energy consumption
+";enerconsum;Joules;enerconsum/joules;No;no;"Descriptive statistics
+Mentions the word ""significant"" but no p-values are shown.";descstats;"Proxy for smartphone 
+- Odroid-XU3 board which features an Exynos5422 SoC (also used in Samsung Galaxy S5 phone)";smartphone;Android 4.4.4 KitKat;adroid/4/4.4;adroid/4/4.4;"A trimmed-down version of
 the full Chrome browser, the Chrome content shell, which
-contains only the core components of the full browser",modified/chrome,Real,real,"The representative websites we have chosen based
+contains only the core components of the full browser";modified;modified;Real;real;real;"The representative websites we have chosen based
 on rankings from Alexa are: eBay, Amazon, Reddit,
-Facebook, Wikipedia and CNN",alexa,alexa,Yes,Yes,Original website,original,Not provided,not provided,"- The Odroid-XU3 board provides a built-in power measurement interface which has been utilized in our experiment
+Facebook, Wikipedia and CNN";alexa;alexa;Yes;Yes;Original website;original;Not provided;not provided;not provided;"- The Odroid-XU3 board provides a built-in power measurement interface which has been utilized in our experiment
 - Software based:
 - power logger: to measure the power
 - process logger: to get info about processes
-- Chrome:trace get insights in what processes/threads are executing HTML, css, js",enerconsum/software/powerlogger,No,Page load only,pageload,All of them,all,Not provided,notprovided,6 webpages,6,Not provided,Not really provided,not provided
-Comput._Netw_2017,Privacy as a proxy for Green Web browsing: Methodology and experimentation,"Main focus:
+- Chrome:trace get insights in what processes/threads are executing HTML, css, js";enerconsum/software/powerlogger;No;Page load only;pageload;All of them;all;Not provided;notprovided;6 webpages;6;<= 10;Not provided;not provided;Not really provided;not provided;;
+P3;2017;Comput._Netw_2017;Privacy as a proxy for Green Web browsing: Methodology and experimentation;"Main focus:
 Energy consumption
 
 Additional measurements:
 speed
 Effectiveness for different addons
-Information Leakage",enerconsum,"- Joules (J)
+Information Leakage";enerconsum;"- Joules (J)
 - Mean response time Seconds
 - Quantity (false positives, false negatives)
 - number of receiving 3rd party sites out of the
-total number of contacted 3rd party sites",enerconsum/joules,No,no,"- Descriptive statistics
-- hypothesis testing","descstats, hyptest","Smartphone
+total number of contacted 3rd party sites";enerconsum/joules;No;no;"- Descriptive statistics
+- hypothesis testing";descstats, hyptest;"Smartphone
 - Galaxy Nexus i9250
 - CPU Dual-Core 1.2 GHz Cortex-A9
-- Li-Ion 1750 mAh battery",smartphone,"Android, version 4.2.2.",adroid/4/4.2,"Mozila FireFox with addons:
+- Li-Ion 1750 mAh battery";smartphone;Android, version 4.2.2.;adroid/4/4.2;adroid/4/4.2;"Mozila FireFox with addons:
 - The mNoTraceAddon
 - Aesir plugin: logs the load time and the size (bytes) of each embedded
 resource that was downloaded.
-- Real action automization component",modified/firefox,Real,real,"- 8 highly popular sites representing different categories (news, travel, health, sports, employment, social networking, entertainment, photo sharing) (20 runs)
+- Real action automization component";modified;modified;Real;real;real;"- 8 highly popular sites representing different categories (news, travel, health, sports, employment, social networking, entertainment, photo sharing) (20 runs)
 - top 25, top 50, top75 and top 100 from Alexa. (13 runs for each of the 3 configs)
 - 8 websites used for real browsing session. Source from previous research paper they did.
-- user profiles: 18 user profiles, taking the top40 websites from each alexa category.","alexa/top25, alexa/top50, alexa/top75, alexa/top100, alexa/top40, nosource","alexa, nosource",Some,Yes,Original websites,original,"Wifi: campus wifi
+- user profiles: 18 user profiles, taking the top40 websites from each alexa category.";alexa/top25, alexa/top50, alexa/top75, alexa/top100, alexa/top40, nosource;alexa, nosource;Some;Yes;Original websites;original;"Wifi: campus wifi
 3g: Vodafone mobile network
-","wifi(real), 3g(real)","high-precision digital power multimeters 
+";wifi(real), 3g(real);wifi, 3g;"high-precision digital power multimeters 
 - Agilent 34401A
 - Keithley 2000
 - Labview software
-- FireFox plugins","enerconsum/hardware/multimeters, browserplugins",Yes?,"Both 
-- page load but also some usage scenarios (for real browsing sessions)",both,"All of them, considers webapps as one entity.",all,"Disabled, 
-to cached content), we have disabled the browser cache.",disabled,"Not really clear, at least 16 + 250...",notprovided,"20 measurements
+- FireFox plugins";enerconsum/hardware/multimeters, browserplugins;Yes?;"Both 
+- page load but also some usage scenarios (for real browsing sessions)";both;All of them, considers webapps as one entity.;all;"Disabled, 
+to cached content), we have disabled the browser cache.";disabled;Not really clear, at least 16 + 250...;notprovided;not provided;"20 measurements
 13 for each config
 10 measurements
 Not states
 
-","Our “In vivo” methodology was extremely demand-
+";20;"Our “In vivo” methodology was extremely demand-
 ing on a geographical network setting, like 3G, that is not under
 our control. In fact, we were able to repeat only a limited number
 of experiments because of several unavoidable limitations.
@@ -115,22 +115,20 @@ consumption of multiple devices. Additionally, it could be interest-
 ing to compare the energy footprint of Web components both on
 Android and iOS platforms.
 
-- ","problems during experiment, low generalizability"
-"SCI_PROGRAMMING-NET_2019, DASC_2017","An Energy Efficiency Study of Web-Based Communication in
-Android Phones, 
-An empirical study of power consumption of Web-based communications in mobile phones",- Energy Consumption,enerconsum,- Joules (J),enerconsum/joules,No,no,"- Descriptive statistics,
+- ";problems during experiment, low generalizability;;
+P4A;2017;DASC_2017;An empirical study of power consumption of Web-based communications in mobile phones;- Energy Consumption;enerconsum;- Joules (J);enerconsum/joules;No;no;"- Descriptive statistics,
 - development of predictive models
 - correlation analysis
 - hypothesis testing
-- effect size estimation","descstats, predmod, correlana, hyptest, effsize","Smartphone
+- effect size estimation";descstats, predmod, correlana, hyptest, effsize;"Smartphone
 - Samsung Galaxy Nexus
 - Nexus 5
-",smartphone,"Galaxy Nexus: Android 4.3
-Nexus 5: Android 6.0.1","adroid/4/4.3, adroid/6","Google Chrome
-Firefox","chrome, firefox",Synthetic (they developed their own webapp),synthetic,Developed one webapp that uses the 3 communication protocols,selfcreated,selfcreated,Not applicable (synthetic),synthetic,"deployed on a Glassfish web server running in a Windows 10 PC connected
-to a Gigabit ethernet network.",not applicable,WLAN: phones use WLAN to access the web server.,wifi(real),"Software based profilers:
+";smartphone;"Galaxy Nexus: Android 4.3
+Nexus 5: Android 6.0.1";adroid/4/4.3, adroid/6;adroid/4/4.3, adroid/6;"Google Chrome
+Firefox";chrome, firefox;chrome, firefox;Synthetic (they developed their own webapp);synthetic;synthetic;Developed one webapp that uses the 3 communication protocols;selfcreated;selfcreated;Not applicable (synthetic);synthetic;"deployed on a Glassfish web server running in a Windows 10 PC connected
+to a Gigabit ethernet network.";not applicable;WLAN: phones use WLAN to access the web server.;wifi(real);wifi;"Software based profilers:
 - GreenOracle
-- Trepn Profiler","enerconsum/software/trepn, enerconsum/software/greenoracle",Yes?,pageload,pageload,Javascript,javascript,Not provided,notprovided,1 webapp but has different components that use one of the 3 different communication mechanisms,3,20,"As we stated in Section III, the difficulties of
+- Trepn Profiler";enerconsum/software/trepn, enerconsum/software/greenoracle;Yes?;pageload;pageload;Javascript;javascript;Not provided;notprovided;1 webapp but has different components that use one of the 3 different communication mechanisms;3;<= 10;20;20;"As we stated in Section III, the difficulties of
 reproducing experiments made by hardware solutions by third
 parties and the precision demonstrated by these tools are the
 main reasons to select software solutions. Additionally, we are
@@ -153,28 +151,64 @@ parameter is part of our future work.
 - Only used Chrome, while these communication protocols are supported in both FF and Chrome.
 
 Here the limitation is to have reliable energy measurement tools
-available for enough devices.",low generalizability
-EASE_2020,Investigating the Correlation between Performance Scores and Energy Consumption of Mobile Web Apps,"- Energy Consumption
-- Speed","enerconsum, speed","- Joules (J)
-- Lighthouse performance score","enerconsum/joules, speed/lighthouse","Public repository containg
+available for enough devices.";low generalizability;;
+P4B;2019;SCI_PROGRAMMING-NET_2019;An Energy Efficiency Study of Web-Based Communication in Android Phones;- Energy Consumption;enerconsum;- Joules (J);enerconsum/joules;No;no;"- Descriptive statistics,
+- development of predictive models
+- correlation analysis
+- hypothesis testing
+- effect size estimation";descstats, predmod, correlana, hyptest, effsize;"Smartphone
+- Samsung Galaxy Nexus
+- Nexus 5
+";smartphone;"Galaxy Nexus: Android 4.3
+Nexus 5: Android 6.0.1";adroid/4/4.3, adroid/6;adroid/4/4.3, adroid/6;"Google Chrome
+Firefox";chrome, firefox;chrome, firefox;Synthetic (they developed their own webapp);synthetic;synthetic;Developed one webapp that uses the 3 communication protocols;selfcreated;selfcreated;Not applicable (synthetic);synthetic;"deployed on a Glassfish web server running in a Windows 10 PC connected
+to a Gigabit ethernet network.";not applicable;WLAN: phones use WLAN to access the web server.;wifi(real);wifi;"Software based profilers:
+- GreenOracle
+- Trepn Profiler";enerconsum/software/trepn, enerconsum/software/greenoracle;Yes?;pageload;pageload;Javascript;javascript;Not provided;notprovided;1 webapp but has different components that use one of the 3 different communication mechanisms;3;<= 10;20;20;"As we stated in Section III, the difficulties of
+reproducing experiments made by hardware solutions by third
+parties and the precision demonstrated by these tools are the
+main reasons to select software solutions. Additionally, we are
+
+- s of the communication mechanisms could be influenced
+by how we have implemented the web applications used in the
+experiments. In order to mitigate this threat, we have based our
+implementations in minimal examples provided by tutorials
+from Netbeans and university courses. Moreover, we have
+detected that the user interface can be an important source of
+energy consumption, so we have used the same user interface
+for the three mechanisms.
+
+- but
+developers must know that the conclusions raised in this paper
+can be considered valid only for interactions with the mobile
+phone of 1 minute of duration. Exploring the influence of this
+parameter is part of our future work.
+
+- Only used Chrome, while these communication protocols are supported in both FF and Chrome.
+
+Here the limitation is to have reliable energy measurement tools
+available for enough devices.";low generalizability;;
+P5;2020;EASE_2020;Investigating the Correlation between Performance Scores and Energy Consumption of Mobile Web Apps;"- Energy Consumption
+- Speed";enerconsum, speed;"- Joules (J)
+- Lighthouse performance score";enerconsum/joules, speed/lighthouse;"Public repository containg
  results, raw data, and the scripts used to obtain the statistics.
-",yes/code_data_instructions,"- Descriptive statistics
+";yes/instructions_data_code;"- Descriptive statistics
 - correlation analysis, 
 - hypothesis testing
-- effect size estimation","descstats, correlana, hyptest, effsize","Tablet
+- effect size estimation";descstats, correlana, hyptest, effsize;"Tablet
 - HTC Nexus 9
 - 2.3 GHZ Dual Core processor (Denver), 
 - 2Gb of RAM, 
 - a Kepler DX1 GPU
 - 802.11 a/b/g/n/ac Wi-Fi interface.
-- 6700 mAh Lithium-Polymer battery",tablet,Android 7.1.1,adroid/7,Google Chrome browser (version 54.0.2840.85).,chrome,- Real,real,"Alexa list, programmatically select the top100 unique webapps.
-Stratified random sampling to get 21 apps (classified over 3 performance levels)",alexa/top100,alexa,Yes,Yes,Original website,original,"Wifi
-100Mbps",wifi(real),"- Google Lighthouse
+- 6700 mAh Lithium-Polymer battery";tablet;Android 7.1.1;adroid/7;adroid/7;Google Chrome browser (version 54.0.2840.85).;chrome;chrome;- Real;real;real;"Alexa list, programmatically select the top100 unique webapps.
+Stratified random sampling to get 21 apps (classified over 3 performance levels)";alexa/top100;alexa;Yes;Yes;Original website;original;"Wifi
+100Mbps";wifi(real);wifi;"- Google Lighthouse
 - Software based energry profiler: GreenSpector
 - UIAUtomator 8: UI automation
-- Android Debug Bridge","enerconsum/software/greenspector, speed/lighthouse",Yes,Page load only,pageload,"All of them, considers webapps as one entity.",all,"Disabled
+- Android Debug Bridge";enerconsum/software/greenspector, speed/lighthouse;Yes;Page load only;pageload;All of them, considers webapps as one entity.;all;"Disabled
 ""the Google Chrome app is cleared before each run so to reset its
-cache and persisted data.""",disabled,21 webapps,21,25 runs,"- Nevertheless,
+cache and persisted data.""";disabled;21 webapps;21;<= 50;25 runs;25;"- Nevertheless,
 newer devices running newer Android releases may lead to differ-
 ent energy measurements; further replications of the performed
 experiments can help in mitigating this potential threat to validity.
@@ -191,15 +225,15 @@ validity.
 
 - Moreover, we are planning to replicate the experiment by using
 additional performance analysis tools and metrics so to improve
-the generalizability of our findings.","measurement errors, low generalizability"
-HotMobile_2015,Why are Web Browsers Slow on Smartphones?,Speed,speed,"Browser delay:
+the generalizability of our findings.";measurement errors, low generalizability;;
+P6;2015;HotMobile_2015;Why are Web Browsers Slow on Smartphones?;Speed;speed;"Browser delay:
 starts when user hits go
-ends when browser completely presents the requested webpage to user (page loading process bar indicates 100%)",speed/bd/s,No,no,Descriptive statistics,descstats,"Smartphone
+ends when browser completely presents the requested webpage to user (page loading process bar indicates 100%)";speed/bd/s;No;no;Descriptive statistics;descstats;"Smartphone
 - Nexus One (N1)
-- HTC Dream (G1),",smartphone,Both run Android 2.1,"adroid/2/2.1, adroid/2/2.1",Modified Webkit (1200 lines of code) Browser so they can capture dependency timeline,modified/webkit,Real,real,"Mobile websites: 10 most visited websites from mobile phone in 2009 as reported by the blog of Nielsen.com
-Non-mobile webpages: 10 most visited non-mobile webpages from 25 iPhone 3GS users in three months, collected from an ongoing field study reported in LiveLab",list,list,"Yes, although the blog returns a 404.",Yes,Original website,original,"- Emulated Enterprise Ethernet
-- Typical 3G network: T-mobile","ethernet(emu), 3g(real)",PageCycler: to direct the smartphone browser and captures tcpdumps.,custom,No,Page load only,pageload,"All of them, considers webapps as one entity.",all,Not provided,notprovided,20 webpages,20,Not provided,Not really provided,not provided
-ICSME_2020,From 6.2 to 0.15 seconds – an Industrial Case Study on Mobile Web Performance,Speed (performance),speed,"- First Contentful Paint
+- HTC Dream (G1),";smartphone;Both run Android 2.1;adroid/2/2.1, adroid/2/2.1;adroid/2/2.1, adroid/2/2.1;Modified Webkit (1200 lines of code) Browser so they can capture dependency timeline;modified;modified;Real;real;real;"Mobile websites: 10 most visited websites from mobile phone in 2009 as reported by the blog of Nielsen.com
+Non-mobile webpages: 10 most visited non-mobile webpages from 25 iPhone 3GS users in three months, collected from an ongoing field study reported in LiveLab";list;list;Yes, although the blog returns a 404.;Yes;Original website;original;"- Emulated Enterprise Ethernet
+- Typical 3G network: T-mobile";ethernet(emu), 3g(real);ethernet, 3g;PageCycler: to direct the smartphone browser and captures tcpdumps.;custom;No;Page load only;pageload;All of them, considers webapps as one entity.;all;Not provided;notprovided;20 webpages;20;<= 50;Not provided;not provided;Not really provided;not provided;;
+P7;2020;ICSME_2020;From 6.2 to 0.15 seconds – an Industrial Case Study on Mobile Web Performance;Speed (performance);speed;"- First Contentful Paint
 - First Meaningful Paint
 - Speed Index
 - Total Blocking Time
@@ -209,20 +243,20 @@ ICSME_2020,From 6.2 to 0.15 seconds – an Industrial Case Study on Mobile Web P
 - Fetch Requests
 - DOM Size
 - Lowest Time to Widget
-- Median Time to Widget","speed/si/s, speed/fcp/ms, speed/fmp/ms, speed/tbt/ms, speed/eil/ms, speed/fci/ms, speed/tti/ms, speed/fr, speed/ds, speed/lttw/ms, speed/mttw/ms","Yes, both code and data https://github.com/S2-group/ICSME-2020-replication-package",yes/code_data_instructions,"- Descriptive statistics
+- Median Time to Widget";speed/si/s, speed/fcp/ms, speed/fmp/ms, speed/tbt/ms, speed/eil/ms, speed/fci/ms, speed/tti/ms, speed/fr, speed/ds, speed/lttw/ms, speed/mttw/ms;Yes, both code and data https://github.com/S2-group/ICSME-2020-replication-package;yes/instructions_data_code;"- Descriptive statistics
 - hypothesis testing
-- Effect size estimation","descstats, hyptest, effsize","Smartphone
+- Effect size estimation";descstats, hyptest, effsize;"Smartphone
 - Samsung Galaxy S10E
 - a 2.7 GHz Octa-Core processor, 6Gb of RAM, and an Adreno
 640 GPU (Exynos system on chip).
-",smartphone,Android 10,adroid/10,"Google
-Chrome Android app version 80",chrome,Real,real,Preprovided,preprovided,preprovided,Yes,Yes,"Original (uses staging instance but it uses the same configuration options as the
-production instance (including CloudFront edge nodes))",original,WiFi but uses Google Lighthouse to simulate slow 4G network,4g(emu),"- Custom benchmarking tool based on Google Lighthouse
+";smartphone;Android 10;adroid/10;adroid/10;"Google
+Chrome Android app version 80";chrome;chrome;Real;real;real;Preprovided;preprovided;preprovided;Yes;Yes;"Original (uses staging instance but it uses the same configuration options as the
+production instance (including CloudFront edge nodes))";original;WiFi but uses Google Lighthouse to simulate slow 4G network;4g(emu);4g;"- Custom benchmarking tool based on Google Lighthouse
 - ADB
 - remote debugging API Google Chrome
-- ",custom,Yes?,Page load only,pageload,All of them,all,"Disabled
+- ";custom;Yes?;Page load only;pageload;All of them;all;"Disabled
 Chrome does not have any extensions installed and is reset at every
-run.",disabled,1 webapp,1,30 runs,"- The subject of this case study relies on the
+run.";disabled;1 webapp;1;<= 10;30 runs;30;"- The subject of this case study relies on the
 Angular web framework. The specific opinionated methodol-
 ogy of Angular influenced the engineering work performed
 in our study. -> not generalizeable
@@ -244,46 +278,42 @@ and analysis to desktop machines, (ii) deepen our statistical
 analysis, specially by verifying how performance metrics differ
 between desktop and mobile devices, and (iii) conduct a user
 study to understand how quantitative metrics compare to the
-perceive performance experienced by real users.","low generalizability, measurement errors"
-IEEE_Internet_Computing_2015,The Web for Underpowered Mobile Devices: Lessons Learned from Google Glass,"Energy consumption
-Speed","enerconsum, speed","- mW
-- webpage load time","speed/relative(plt), enerconsum/relative",No,no,"- Descriptive statistics
+perceive performance experienced by real users.";low generalizability, measurement errors;;
+P8;2015;IEEE_Internet_Computing_2015;The Web for Underpowered Mobile Devices: Lessons Learned from Google Glass;"Energy consumption
+Speed";enerconsum, speed;"- mW
+- webpage load time";speed/relative(plt), enerconsum/relative;No;no;"- Descriptive statistics
 - correlation analysis
-- Mentions the word ""significant"" but no p-values are shown.","descstats, correlana","Smartphone
-Nexus 5",smartphone,"Not provided
-Google says Android 4.4",adroid/4/4.4,Chrome 42.0,chrome,Both real and synthetic,"real, synthetic","- picked a total of 50 popular websites from alexa top 500 from 6 different categories
-- Javascript benchmarks (SunSpider benchmark, Dromaeo suite)","alexa/top50, benchmarks","alexa, benchmarks",Yes,Yes,"Real websites were on the internet
-synthetic were on local apache server",original,Not provided,not provided,"- App which invokes the browser with the website URL to be accessed as an input.
-- Profiler app which collects the following data every second: power consumption, downloaded bytes, webpage load time",custom,No,Page load only,pageload,All of them,all,"Disabled
-(cleaned before each experiment)",disabled,50+,50,6 times,Not provided,not provided
-"IEEE_Trans_Mobile_Comput_2015,
-INTERNETWARE_2014,
-WWW_2015","Demystifying the Imperfect Client-Side Cache Performance of Mobile Web Browsing,
-Characterizing Cache Usage for Mobile Web Applications,
-Measurement and Analysis of Mobile Web Cache Performance",Cache Performance,cacheperform,"- Cacheability of a website (both resource size and number)
+- Mentions the word ""significant"" but no p-values are shown.";descstats, correlana;"Smartphone
+Nexus 5";smartphone;"Not provided
+Google says Android 4.4";adroid/4/4.4;adroid/4/4.4;Chrome 42.0;chrome;chrome;Both real and synthetic;real, synthetic;both;"- picked a total of 50 popular websites from alexa top 500 from 6 different categories
+- Javascript benchmarks (SunSpider benchmark, Dromaeo suite)";alexa/top50, benchmarks;alexa, benchmarks;Yes;Yes;"Real websites were on the internet
+synthetic were on local apache server";original;Not provided;not provided;not provided;"- App which invokes the browser with the website URL to be accessed as an input.
+- Profiler app which collects the following data every second: power consumption, downloaded bytes, webpage load time";custom;No;Page load only;pageload;All of them;all;"Disabled
+(cleaned before each experiment)";disabled;50+;50;<= 50;6 times;6;Not provided;not provided;;
+P9A;2015;IEEE_Trans_Mobile_Comput_2015;Demystifying the Imperfect Client-Side Cache Performance of Mobile Web Browsing;Cache Performance;cacheperform;"- Cacheability of a website (both resource size and number)
 - Actual cache performance of a website (both resource size and number)
 - Positive hit
 - Negative hit
 - Positive miss
-- Negative Miss","cacheperform/cacheability, cacheperform/actualcache, cacheperform/ph, cacheperform/nh, cacheperform/pm, cacheperform/nm",no,no,"Descriptive statistics
-Mentions the word ""significant"" but no p-values are shown.",descstats,"Emulation
-PC",emulation,"Emulation
-PC but they emulate a Android 4.2 native browser",emu,"Emulation
-Google Chrome emulated as a mobile browser (an Android 4.2 native browser)",emu/chrome,Real,real,"2 sets:
+- Negative Miss";cacheperform/cacheability, cacheperform/actualcache, cacheperform/ph, cacheperform/nh, cacheperform/pm, cacheperform/nm;no;no;"Descriptive statistics
+Mentions the word ""significant"" but no p-values are shown.";descstats;"Emulation
+PC";emulation;"Emulation
+PC but they emulate a Android 4.2 native browser";emu;-;"Emulation
+Google Chrome emulated as a mobile browser (an Android 4.2 native browser)";emu;emu;Real;real;real;"2 sets:
 - (Top) contains Alexa’s top 100 websites.
 - contains 100 websites randomly selected from Alexa’s top
 1,000,000 list.
-After filtering (https only and duplicates) this resulted in 146 websites. (55 top, 91 random)","alexa/top100, alexa/top1000000",alexa,No,No,Original websites,original,Not provided,not provided,"- Charles Proxy: to act as the middle tier for data collection. Charles can
+After filtering (https only and duplicates) this resulted in 146 websites. (55 top, 91 random)";alexa/top100, alexa/top1000000;alexa;No;No;Original websites;original;Not provided;not provided;not provided;"- Charles Proxy: to act as the middle tier for data collection. Charles can
 record each TCP connection passed through it and save
 HTTP traces in structured data.
 - Custom Chrome extension: The extension takes a list of URLs and controls
 the Chrome browser to visit the URLs one by one. Before
 each visit, the browser cache is cleaned in order to en-
-sure that all the resources are loaded from the network.","custom, proxy/charles",No?,Page load only,pageload,All of them,all,"Disabled
+sure that all the resources are loaded from the network.";custom, proxy/charles;No?;Page load only;pageload;All of them;all;"Disabled
 
 The Chrome browser to visit the URLs one by one. Before
 each visit, the browser cache is cleaned in order to en-
-sure that all the resources are loaded from the network.",both,146,146,every 30 min over a period of a week: more than 300 times,"- Furthermore, using a PC-version browser
+sure that all the resources are loaded from the network.";both;146;146;<= 1000;every 30 min over a period of a week: more than 300 times;300;"- Furthermore, using a PC-version browser
 helps us leverage the browser’s programmability, which is
 not easy on Android smartphones.
 
@@ -320,73 +350,195 @@ anism, so we assume that the proxy used in our framework
 can intercept all resources fetched from Web server. It is
 possible to obtain different measurement results by using
 other proxies than Charles. We plan to compare the impacts
-introduced by different proxies in future work","low generalizability, measurement errors"
-IJSH_2013,Performance Analysis of Web-browsing Speed in Smart Mobile Devices,Speed,speed,Loading time (ms),speed/lt/ms,No,no,Descriptive statistics,descstats,"Tablet: Ipad2
-Smartphone (iphone4, Galaxy S)","tablet, smartphone",Not provided,"ios, ios, adroid","Mobile Safari
+introduced by different proxies in future work";low generalizability, measurement errors;;
+P9B;2014;INTERNETWARE_2014;Characterizing Cache Usage for Mobile Web Applications;Cache Performance;cacheperform;"- Cacheability of a website (both resource size and number)
+- Actual cache performance of a website (both resource size and number)
+- Positive hit
+- Negative hit
+- Positive miss
+- Negative Miss";cacheperform/cacheability, cacheperform/actualcache, cacheperform/ph, cacheperform/nh, cacheperform/pm, cacheperform/nm;no;no;"Descriptive statistics
+Mentions the word ""significant"" but no p-values are shown.";descstats;"Emulation
+PC";emulation;"Emulation
+PC but they emulate a Android 4.2 native browser";emu;-;"Emulation
+Google Chrome emulated as a mobile browser (an Android 4.2 native browser)";emu;emu;Real;real;real;"2 sets:
+- (Top) contains Alexa’s top 100 websites.
+- contains 100 websites randomly selected from Alexa’s top
+1,000,000 list.
+After filtering (https only and duplicates) this resulted in 146 websites. (55 top, 91 random)";alexa/top100, alexa/top1000000;alexa;No;No;Original websites;original;Not provided;not provided;not provided;"- Charles Proxy: to act as the middle tier for data collection. Charles can
+record each TCP connection passed through it and save
+HTTP traces in structured data.
+- Custom Chrome extension: The extension takes a list of URLs and controls
+the Chrome browser to visit the URLs one by one. Before
+each visit, the browser cache is cleaned in order to en-
+sure that all the resources are loaded from the network.";custom, proxy/charles;No?;Page load only;pageload;All of them;all;"Disabled
+
+The Chrome browser to visit the URLs one by one. Before
+each visit, the browser cache is cleaned in order to en-
+sure that all the resources are loaded from the network.";both;146;146;<= 1000;every 30 min over a period of a week: more than 300 times;300;"- Furthermore, using a PC-version browser
+helps us leverage the browser’s programmability, which is
+not easy on Android smartphones.
+
+- In future work, we plan to compare the differences of
+client-side cache performance between mobile and desktop
+website versions when accessing them on mobile devices.
+
+- A threat to validity is the size of our dataset. In our
+dataset, we have the 51 websites from Alexa’s Top 100 list
+and the 91 websites randomly chosen from Alexa’s Top
+1,000,000 list. The total number of websites may not be
+large enough to represent the average situation, leading to
+conclusions that may not be generalizable.
+
+- We consider only the home page (or the landing page)
+for each website. The home page is the first view that users
+can see when they visit a website. So Web developers have
+to make a lot of efforts to optimize their home page for
+fast and efficient page load.
+
+- Our study excludes the websites transferred via the
+HTTPS protocol. However, it is a big trend that more and
+more websites, especially their mobile versions, are being
+migrated from HTTP to HTTPS for enhancing security. Ex-
+cluding HTTPS may neglect some valuable findings. At the
+(problem is that https is encrypted and thus can not be captured by their used tools).
+
+-Our data collection lasted for only one week so that we
+can report the cache performance with only less than 24-
+hour revisiting interval
+
+-Our measurement targets at the client-side cache mech-
+anism, so we assume that the proxy used in our framework
+can intercept all resources fetched from Web server. It is
+possible to obtain different measurement results by using
+other proxies than Charles. We plan to compare the impacts
+introduced by different proxies in future work";low generalizability, measurement errors;;
+P9C;2015;WWW_2015;Measurement and Analysis of Mobile Web Cache Performance;Cache Performance;cacheperform;"- Cacheability of a website (both resource size and number)
+- Actual cache performance of a website (both resource size and number)
+- Positive hit
+- Negative hit
+- Positive miss
+- Negative Miss";cacheperform/cacheability, cacheperform/actualcache, cacheperform/ph, cacheperform/nh, cacheperform/pm, cacheperform/nm;no;no;"Descriptive statistics
+Mentions the word ""significant"" but no p-values are shown.";descstats;"Emulation
+PC";emulation;"Emulation
+PC but they emulate a Android 4.2 native browser";emu;-;"Emulation
+Google Chrome emulated as a mobile browser (an Android 4.2 native browser)";emu;emu;Real;real;real;"2 sets:
+- (Top) contains Alexa’s top 100 websites.
+- contains 100 websites randomly selected from Alexa’s top
+1,000,000 list.
+After filtering (https only and duplicates) this resulted in 146 websites. (55 top, 91 random)";alexa/top100, alexa/top1000000;alexa;No;No;Original websites;original;Not provided;not provided;not provided;"- Charles Proxy: to act as the middle tier for data collection. Charles can
+record each TCP connection passed through it and save
+HTTP traces in structured data.
+- Custom Chrome extension: The extension takes a list of URLs and controls
+the Chrome browser to visit the URLs one by one. Before
+each visit, the browser cache is cleaned in order to en-
+sure that all the resources are loaded from the network.";custom, proxy/charles;No?;Page load only;pageload;All of them;all;"Disabled
+
+The Chrome browser to visit the URLs one by one. Before
+each visit, the browser cache is cleaned in order to en-
+sure that all the resources are loaded from the network.";both;146;146;<= 1000;every 30 min over a period of a week: more than 300 times;300;"- Furthermore, using a PC-version browser
+helps us leverage the browser’s programmability, which is
+not easy on Android smartphones.
+
+- In future work, we plan to compare the differences of
+client-side cache performance between mobile and desktop
+website versions when accessing them on mobile devices.
+
+- A threat to validity is the size of our dataset. In our
+dataset, we have the 51 websites from Alexa’s Top 100 list
+and the 91 websites randomly chosen from Alexa’s Top
+1,000,000 list. The total number of websites may not be
+large enough to represent the average situation, leading to
+conclusions that may not be generalizable.
+
+- We consider only the home page (or the landing page)
+for each website. The home page is the first view that users
+can see when they visit a website. So Web developers have
+to make a lot of efforts to optimize their home page for
+fast and efficient page load.
+
+- Our study excludes the websites transferred via the
+HTTPS protocol. However, it is a big trend that more and
+more websites, especially their mobile versions, are being
+migrated from HTTP to HTTPS for enhancing security. Ex-
+cluding HTTPS may neglect some valuable findings. At the
+(problem is that https is encrypted and thus can not be captured by their used tools).
+
+-Our data collection lasted for only one week so that we
+can report the cache performance with only less than 24-
+hour revisiting interval
+
+-Our measurement targets at the client-side cache mech-
+anism, so we assume that the proxy used in our framework
+can intercept all resources fetched from Web server. It is
+possible to obtain different measurement results by using
+other proxies than Charles. We plan to compare the impacts
+introduced by different proxies in future work";low generalizability, measurement errors;;
+P10;2013;IJSH_2013;Performance Analysis of Web-browsing Speed in Smart Mobile Devices;Speed;speed;Loading time (ms);speed/lt/ms;No;no;Descriptive statistics;descstats;"Tablet: Ipad2
+Smartphone (iphone4, Galaxy S)";tablet, smartphone;Not provided;ios, ios, adroid;ios, ios, adroid;"Mobile Safari
 Mobile Chrome
-Desktop Chrome","safari, safari, chrome",Real,real,"Wzd.com -> no reason given
+Desktop Chrome";safari, safari, chrome;safari, chrome;Real;real;real;"Wzd.com -> no reason given
 Site consisting of only images
-Daum Communications.",nosource,nosource,Yes,Yes,Original websites,original,Not provided,not provided,Webwait.com -> does not exist anymore,webservice,No,Page load only,pageload,All of them,all,Enabled,enabled,3,3,10 runs,Not provided,not provided
-INFOCOM_2015,What is wrecking your dataplan? A measurement study of mobile web overhead,Bandwidth,bandwidth,KiloBytes,bandwidth/kb,No,no,Descriptive statistics,descstats,Emulated,emulation,Not provided,emu,"Emulated
+Daum Communications.";nosource;nosource;Yes;Yes;Original websites;original;Not provided;not provided;not provided;Webwait.com -> does not exist anymore;webservice;No;Page load only;pageload;All of them;all;Enabled;enabled;3;3;<= 10;10 runs;10;Not provided;not provided;;
+P11;2015;INFOCOM_2015;What is wrecking your dataplan? A measurement study of mobile web overhead;Bandwidth;bandwidth;KiloBytes;bandwidth/kb;No;no;Descriptive statistics;descstats;Emulated;emulation;Not provided;emu;-;"Emulated
 PhantomJS headless browser
-both mobile and desktop user agent string",emu/other,"Real
-Synthethic (as compression tools are used to see how they influence the bandwidth use)","real, synthetic","crawled the top 100 000 websites as ranked by Alexa using custom mobile and desktop browser.
-Removed no-landing page sites such as CDN and timed out/unavailable websites.",alexa/top100000,alexa,No,No,"HAR file, including HTML code etc.
-Also saved to disk",original,Not provided,not provided,JSCover to measure code coverage for JS.,jscover,Yes?,"Usage scenario:
+both mobile and desktop user agent string";emu;emu;"Real
+Synthethic (as compression tools are used to see how they influence the bandwidth use)";real, synthetic;both;"crawled the top 100 000 websites as ranked by Alexa using custom mobile and desktop browser.
+Removed no-landing page sites such as CDN and timed out/unavailable websites.";alexa/top100000;alexa;No;No;"HAR file, including HTML code etc.
+Also saved to disk";original;Not provided;not provided;not provided;JSCover to measure code coverage for JS.;jscover;Yes?;"Usage scenario:
 Done to invoke additional content and functionality. 
-scrolling, mouse events like click and hover, link navigation and other actions to trigger JS execution.",usagescenarios,All of them,all,Not provided,notprovided,95718,95728,Not provided,- One limitation of our study is the temporal invariance of our data set...,not provided
-INTERNETWARE_2019,Understanding Quality of Experiences on Different Mobile Browsers,"Speed
+scrolling, mouse events like click and hover, link navigation and other actions to trigger JS execution.";usagescenarios;All of them;all;Not provided;notprovided;95718;95728;> 1000;Not provided;not provided;- One limitation of our study is the temporal invariance of our data set...;not provided;;
+P12;2019;INTERNETWARE_2019;Understanding Quality of Experiences on Different Mobile Browsers;"Speed
 Cache performance
 
 They measure a lot properties but all with the goal to get insights into how it impacts loading time and cache peformance.
-","cacheperform, speed","Loading time (ms)
-cache hit rate","speed/lt/ms, cacheperform/hr/ratio",No,no,"- Descriptive statistics
+";cacheperform, speed;"Loading time (ms)
+cache hit rate";speed/lt/ms, cacheperform/hr/ratio;No;no;"- Descriptive statistics
 - Hypothesis testing: p values are shown.
-- Effect size estimation","descstats, hyptest, effsize","Emulator
+- Effect size estimation";descstats, hyptest, effsize;"Emulator
 browsers’ emulation mode and set the user-agent header
 of in the requests to “Android 7"", so the servers will return
-mobile-version webpages. When browsers render a webpage,",emulation,Emulated as Android 7,emu,"Emulator
+mobile-version webpages. When browsers render a webpage,";emulation;Emulated as Android 7;emu;-;"Emulator
 Desktop browsers:
 - Chrome 64.0.3282.140
 - Firefox 59.0
-- Opera 52","emu/chrome, emu/firefox, emu/opera",Real,real,"popular websites ranked by Alexa top 500 list.
-deleted unreachable and duplicates -> 337 websites.",alexa/top500,alexa,No,No,Real website,original,1M bandwith Ethernet of Ali Cloud,ethernet(real),"- Custom tool: data-collection platform that can control dif-
+- Opera 52";emu, emu, emu;emu;Real;real;real;"popular websites ranked by Alexa top 500 list.
+deleted unreachable and duplicates -> 337 websites.";alexa/top500;alexa;No;No;Real website;original;1M bandwith Ethernet of Ali Cloud;ethernet(real);ethernet;"- Custom tool: data-collection platform that can control dif-
 ferent browsers to simultaneously visit the same webpages
 and record the network traffic during the process
 
 - Charles webproxy to record all webtraffic and to get data.
 - extensions in browsers to revisit a webpage
-automatically. The extensions are a little different from each other because of 3 different browsers.","proxy/charles, custom","No, Charles is not open source",Page load only,pageload,All of them,all,"Both
+automatically. The extensions are a little different from each other because of 3 different browsers.";proxy/charles, custom;No, Charles is not open source;Page load only;pageload;All of them;all;"Both
 - cache enabled
 - cache disabled
-to see cache performance.",both,337 webpages,337,each webpage is visited 1000 times,Not really provided,not provided
-IW3C2_2017,Push or Request: An Investigation of HTTP/2 Server Push for Improving Mobile Performance,"Speed
-Energy consumption","enerconsum, speed","Page load time PLT
-Joules",speed/plt/(s|ms|relative),No,no,"Descriptive statistics
-Mentions the word ""significant"" but no p-values are shown.",descstats,"Smartphone
+to see cache performance.";both;337 webpages;337;<= 1000;each webpage is visited 1000 times;1000;Not really provided;not provided;;
+P13;2017;IW3C2_2017;Push or Request: An Investigation of HTTP/2 Server Push for Improving Mobile Performance;"Speed
+Energy consumption";enerconsum, speed;"Page load time PLT
+Joules";speed/plt/(s|ms|relative);No;no;"Descriptive statistics
+Mentions the word ""significant"" but no p-values are shown.";descstats;"Smartphone
 - Samsung S5
-- Samsung S3.",smartphone,"Not provided
+- Samsung S3.";smartphone;"Not provided
 Google says:
 Android 6.0.1 Marshmallow
-Android 4.04","adroid/4/4.0, adroid/6",Google Chrome,chrome,"Real/Synthethic:
+Android 4.04";adroid/4/4.0, adroid/6;adroid/4/4.0, adroid/6;Google Chrome;chrome;chrome;"Real/Synthethic:
 If necessary they where  manually edited to remove popups and redirects
 that interfered with automated analysis, and to ensure where possi-
 ble content is loaded locally.where necessary manually edited to remove popups and redirects
 that interfered with automated analysis, and to ensure where possi-
 ble content is loaded locally.
 
-- changed the number of images","real, synthetic","Alexa top 500, selecting 50 sites starting with most popular.
-removed duplicates (google.com and google.nl are considerd to be the same for example)",alexa/top500,alexa,No,No,Mirrored on campus server,mirrored,"- local LTE network
+- changed the number of images";real, synthetic;both;"Alexa top 500, selecting 50 sites starting with most popular.
+removed duplicates (google.com and google.nl are considerd to be the same for example)";alexa/top500;alexa;No;No;Mirrored on campus server;mirrored;"- local LTE network
 - a home WiFi network
-","lte(real), wifi(real)","Chrome debug interface inspect#devices
+";lte(real), wifi(real);lte, wifi;"Chrome debug interface inspect#devices
 
 - the power model in a recent paper [24], using the same parameters
 as in that paper. That gets tcpdump traces as input
-- We collected tcpdump traces from our page loading experiments and calculated the power impact of Server Push withboth the WiFi and cellular network","enerconsum/software, chrome",Yes?,Page load only,pageload,All of them,all,Disabled,disabled,50,50,"3
+- We collected tcpdump traces from our page loading experiments and calculated the power impact of Server Push withboth the WiFi and cellular network";enerconsum/software, chrome;Yes?;Page load only;pageload;All of them;all;Disabled;disabled;50;50;<= 50;"3
 total 5 runs but 
 the values of three mea-
 surements were averaged, rather than five, due to the manual effort
-involved.","Finally, we analyze mirrored websites, because there are almost
+involved.";3;"Finally, we analyze mirrored websites, because there are almost
 no real websites using Server Push. It is possible, however, that as
 Server Push is deployed on production servers, other factors affect-
 ing Server Push will become apparent. We hope that our findings
@@ -395,9 +547,9 @@ will motivate more sites to make use of Server Push.
 we use the default order for pushing content, and don’t ex-
 plore alternate orderings based on, say, dependencies
 
-",low generalizability
-IWQoS_2013,mBenchLab: Measuring QoE of Web Applications using mobile devices,Speed,speed,Latency (seconds),speed/latency/s,no,no,"Descriptive statistics
-Mentions the word ""significant"" but no p-values are shown.",descstats,"Tablets
+";low generalizability;;
+P14;2013;IWQoS_2013;mBenchLab: Measuring QoE of Web Applications using mobile devices;Speed;speed;Latency (seconds);speed/latency/s;no;no;"Descriptive statistics
+Mentions the word ""significant"" but no p-values are shown.";descstats;"Tablets
 - Trio Stealth Pro Tablet (Single core 1.2GHz ARM Cortex A8, 512MB RAM, 4GB storage)
 - Amazon Kindle Fire (Dual core 1.2 GHz TI OMAP4 4430HS, 512MB RAM, 8GB)
 
@@ -405,19 +557,19 @@ Smartphones
 - HTC Desire C (Single core 600MHz, ARM Cortex-A5, 512MB, 4GB)
 - Samsung S3 GT-I9300 (Quad-core 1.4 GHz ARM Cortex-A9, 1GB, 32+64GB)
 - Motorola Droid RAZR (Dual core 1.2 GHz ARM Cortex-A9, 1GB, 16GB)
-","tablet, smartphone","- Android 4.0.3
+";tablet, smartphone;"- Android 4.0.3
 - Android 4.1.2
 
 - Android 4.0.3
 - Android 4.1.2
-- Android 4.0.4","adroid/4/4.0, adroid/4/4.0, adroid/4/4.0, adroid/4/4.1, adroid/4/4.1","Native Android browser,
-",other/nativeadroid,"3 Real (Amazon, Craiglist, Wikipedia)
+- Android 4.0.4";adroid/4/4.0, adroid/4/4.0, adroid/4/4.0, adroid/4/4.1, adroid/4/4.1;adroid/4/4.0, adroid/4/4.0, adroid/4/4.0, adroid/4/4.1, adroid/4/4.1;"Native Android browser,
+";nativeadroid;nativeadroid;"3 Real (Amazon, Craiglist, Wikipedia)
 1 Synthethic (their own implementation of wikibooks)
-Both URLS and HAR traces","real, synthetic",Chosen beforehand,nosource,nosource,Yes,Yes,Real and HAR,original,"- WiFi
+Both URLS and HAR traces";real, synthetic;both;Chosen beforehand;nosource;nosource;Yes;Yes;Real and HAR;original;"- WiFi
 - 3G -> USA->straight talk AT&T, EU->Orange
-- 4G -> Verizon","wifi(real), 3g(real), 4g(real)",- Custom tool mBenchLab which can benchmark the QoE of cloud hosted Web applications with Android devices,custom,"Yes, they provide the source of their tool","includes the list of URLs to visit and encodes the values to fill
-Web forms as well as buttons to click",usagescenarios,All of them,all,"Disabled
-Cleaned between runs",disabled,4,4,5 times,"- Since Amazon shows significant difference in the content being
+- 4G -> Verizon";wifi(real), 3g(real), 4g(real);wifi, 3g, 4g;- Custom tool mBenchLab which can benchmark the QoE of cloud hosted Web applications with Android devices;custom;Yes, they provide the source of their tool;"includes the list of URLs to visit and encodes the values to fill
+Web forms as well as buttons to click";usagescenarios;All of them;all;"Disabled
+Cleaned between runs";disabled;4;4;<= 10;5 times;5;"- Since Amazon shows significant difference in the content being
 fetched between consecutive runs, it is not possible to directly
 compare the performance between these runs. This shows that
 it is important to understand the details of the generated content
@@ -426,24 +578,24 @@ to be able to interpret client side QoE.
 - While techniques such as HTML recording and screen
 snapshots can help detect some issues in the rendered page, the
 overall page loading time measurements is not sufficient to
-understand the root cause of QoE issues",limitations of used metrics
-MobiCASE_2014,Experimental Study of Energy and Bandwidth Costs of Web Advertisements on Smartphones,"Energy consumption
-Bandwidth","enerconsum, bandwidth","Joules and mW
-Bytes","bandwidth/bytes, enerconsum/joules, enerconsum/joules",No,no,"Descriptive statistics
-",descstats,"Smartphone
-- Samsung Galaxy Nexus.",smartphone,Android V4.2.1,adroid/4/4.2,"- builtin Android browser
+understand the root cause of QoE issues";limitations of used metrics;;
+P15;2014;MobiCASE_2014;Experimental Study of Energy and Bandwidth Costs of Web Advertisements on Smartphones;"Energy consumption
+Bandwidth";enerconsum, bandwidth;"Joules and mW
+Bytes";bandwidth/bytes, enerconsum/joules, enerconsum/joules;No;no;"Descriptive statistics
+";descstats;"Smartphone
+- Samsung Galaxy Nexus.";smartphone;Android V4.2.1;adroid/4/4.2;adroid/4/4.2;"- builtin Android browser
 - self developed app: semi web browser (to ensure the reliability of their measurements.
-this made it possible to run experiment at consistent time intervals, minimized end user interaction.","other/nativeadroid, modified","Real/Synthethic:
-synthethic as ads are manually removed to see difference in energy consumption.","real, synthetic","We chose a number of websites: (i) the most-accessed local
+this made it possible to run experiment at consistent time intervals, minimized end user interaction.";nativeadroid, modified;nativeadroid, modified;"Real/Synthethic:
+synthethic as ads are manually removed to see difference in energy consumption.";real, synthetic;both;"We chose a number of websites: (i) the most-accessed local
 news websites; (ii) a highly ranked international news website;
-and (iii) three samples of highly ranked Canadian magazine",nosource,nosource,Yes,Yes,Mirrored on own server,mirrored,"-3G (HSPA + Bell prepaid SIM)
-- WiFi","wifi(real), 3g(real)","- Monsoon power monitor
-- Wireshark, traces were analyzed to classify how much bandwidth web ads consume.",enerconsum/hardware/monsoon,"Yes?
-No-> their custom browser code is not given",Page load only,pageload,All of them,all,"Disabled
+and (iii) three samples of highly ranked Canadian magazine";nosource;nosource;Yes;Yes;Mirrored on own server;mirrored;"-3G (HSPA + Bell prepaid SIM)
+- WiFi";wifi(real), 3g(real);wifi, 3g;"- Monsoon power monitor
+- Wireshark, traces were analyzed to classify how much bandwidth web ads consume.";enerconsum/hardware/monsoon;"Yes?
+No-> their custom browser code is not given";Page load only;pageload;All of them;all;"Disabled
 We make sure that no data is cached and all the
 web elements will be requested entirely fresh from the web
 server in each web request. Therefore, we clear the browser’s
-cache before every experiment",disabled,5,5,Not provided,"-  We found it very difficult to separate the energy consumed by
+cache before every experiment";disabled;5;5;<= 10;Not provided;not provided;"-  We found it very difficult to separate the energy consumed by
 the rendering process and the radio/network interface activity
 
 - the test bench of the evaluated websites can be further
@@ -451,22 +603,22 @@ extended. Instead of evaluating only five websites, more can
 be covered.
 
 - They developed their own browser to minimise interaction (for example typing in the website)
-They were unaware of tols available, although can be the date.","measurement errors, low generalizability"
-MobiCom_2019,AMP up your Mobile Web Experience: Characterizing the Impact of Google’s Accelerated Mobile Project,Speed,speed,"- Page Load Time
+They were unaware of tols available, although can be the date.";measurement errors, low generalizability;;
+P16;2019;MobiCom_2019;AMP up your Mobile Web Experience: Characterizing the Impact of Google’s Accelerated Mobile Project;Speed;speed;"- Page Load Time
 - Time to First Byte
-- SpeedIndex","speed/plt/ms, speed/ttfb/ms, speed/si/ms",No,no,"Descriptive statistics
+- SpeedIndex";speed/plt/ms, speed/ttfb/ms, speed/si/ms;No;no;"Descriptive statistics
 Maybe: Hypothesis testing (Kolmogorov-Smirnov test and pvalues are shown for one thing.
-uses the word significant a lot but no p values are shown.","descstats, hyptest","Emulator
+uses the word significant a lot but no p values are shown.";descstats, hyptest;"Emulator
 Desktop
 - MacBook Pro with 16 GB of 1600MHz
-memory and an Intel Core i7 processor.",emulation,Mac OS,emu,"Emulator
-See WebPageTest",emu/webpagetest,Real,real,"scraped AMP webpages based on 578 keywords. found using Google Trends US 2017
-Then duplicates and pages that did not have Non AMP counterparts were deleted.",scraped,scraped,No,No,Original website,original,"
+memory and an Intel Core i7 processor.";emulation;Mac OS;emu;-;"Emulator
+See WebPageTest";webpagetest;webpagetest;Real;real;real;"scraped AMP webpages based on 578 keywords. found using Google Trends US 2017
+Then duplicates and pages that did not have Non AMP counterparts were deleted.";scraped;scraped;No;No;Original website;original;"
 -  configure our testbed environment to simulate the behavior
-of a large US mobile provider.",simulated,"-WebPageTest v17.12
+of a large US mobile provider.";simulated;simulated;"-WebPageTest v17.12
 - and Linux’s Traffic Control and Network Emulation tools,
-which we use to emulate mobile network conditions.","webservice/webpagetest, tc",Yes?,Page load only,pageload,All of them,all,Not provided,notprovided,"2132 * 4 = 8528 pages
-since each page has 4 versions which are tested ",8528,3 times,"- For starters, we conducted our tests for AMP with a single
+which we use to emulate mobile network conditions.";webservice/webpagetest, tc;Yes?;Page load only;pageload;All of them;all;Not provided;notprovided;"2132 * 4 = 8528 pages
+since each page has 4 versions which are tested ";8528;> 1000;3 times;3;"- For starters, we conducted our tests for AMP with a single
 configuration (i.e., one location, using one type of connection,
 on a single device, etc.). Different network conditions may
 yield different results on either the performance impact of
@@ -476,21 +628,21 @@ AMP and/or the relative contributions of its features.
 of Experience, such as PLT, TTFB, and SI. More qualitative
 research on AMP user experience may help improve our
 understanding of the benefits of the different features of
-AMP.","low generalizability, limitations of used metrics"
-MOBILIGHT_2010,Analysis of the Energy Consumption of JavaScript Based Mobile Web Applications,"Energy consumption (main focus)
+AMP.";low generalizability, limitations of used metrics;;
+P17;2010;MOBILIGHT_2010;Analysis of the Energy Consumption of JavaScript Based Mobile Web Applications;"Energy consumption (main focus)
 Other things that are measured
 - data transfer (bytes uploaded and downloaded)
 - execution time
-- CPU time",enerconsum,"Energy consumption; Joules
+- CPU time";enerconsum;"Energy consumption; Joules
 data transfer: KB/s
 Time: seconds
-CPU time only shown as relative value.",enerconsum/joules,No,no,"Descriptive statistics
-They plot the correlation but its not explicitely calculated.",descstats,"Smartphone
+CPU time only shown as relative value.";enerconsum/joules;No;no;"Descriptive statistics
+They plot the correlation but its not explicitely calculated.";descstats;"Smartphone
 - Nokia N900
-- Nokia E71",smartphone,"Maemo 5
-- Symbian","maemo/5, symbian","Maemo Browser (the built in browser)
-- Nokia Browser for Symbian","other, other",Synthetic,synthetic,8 implementations using different JS frameworks of same webapp,selfcreated,selfcreated,Not applicable (synthetic),synthetic,Hosted at university server,not applicable,"- WLAN
-- 3G","wifi(real), 3g(real)",Nokia Energy Profiler,enerconsum/software,No?,Usage scenario,usagescenarios,Javascript,javascript,Not provided,notprovided,8 webapps,8,5 times,"- Different implementations were done by computer science students
+- Nokia E71";smartphone;"Maemo 5
+- Symbian";maemo/5, symbian;other, other;"Maemo Browser (the built in browser)
+- Nokia Browser for Symbian";other, other;other;Synthetic;synthetic;synthetic;8 implementations using different JS frameworks of same webapp;selfcreated;selfcreated;Not applicable (synthetic);synthetic;Hosted at university server;not applicable;"- WLAN
+- 3G";wifi(real), 3g(real);wifi, 3g;Nokia Energy Profiler;enerconsum/software;No?;Usage scenario;usagescenarios;Javascript;javascript;Not provided;notprovided;8 webapps;8;<= 10;5 times;5;"- Different implementations were done by computer science students
 at Aalto University who were either at the final year of their master studies or at post-
 graduate level. The test group thus presented technically skilled developers who had
 experience in programming with various languages. However, most of the persons did
@@ -515,24 +667,23 @@ would be useful to verify and to extend our results via more controlled experiem
 bigger the software size the harder it is to create multiple implementation for
 comparison purposes. Moreover, in case of more complicated software the differences
 between design decisions that different developers make become more dominant
-making the comparison harder.",low generalizability
-MobiSys_2014,Characterizing Resource Usage for Mobile Web Browsing,"- Energy consumption
-- Bandwidth","enerconsum, bandwidth","Bandwidth: KB
-Energy consumption is measured relatively: as savings","bandwidth/kb, enerconsum/relative",No,no,Descriptive statistics,descstats,"Smartphone
-- Samsung Galaxy SIII",smartphone,Android 4.0.4,adroid/4/4.0,"Wrote own app based on Webview (A WebView is the programmable version of the
-default Android browser.) to automatically load the website URLS.",modified/webview,Real,real,Alexa top 500 U.S. websites February 2013,alexa/top500,alexa,No,No,"Original website
-/Traces",original,"- 3G HSPA+ network
-- a corporate Wi-Fi network,","wifi(real), 3g(real)","App on mobile phone UbiDump: mobile device and precisely reconstructs all web transfers carried
+making the comparison harder.";low generalizability;;
+P18;2014;MobiSys_2014;Characterizing Resource Usage for Mobile Web Browsing;"- Energy consumption
+- Bandwidth";enerconsum, bandwidth;"Bandwidth: KB
+Energy consumption is measured relatively: as savings";bandwidth/kb, enerconsum/relative;No;no;Descriptive statistics;descstats;"Smartphone
+- Samsung Galaxy SIII";smartphone;Android 4.0.4;adroid/4/4.0;adroid/4/4.0;"Wrote own app based on Webview (A WebView is the programmable version of the
+default Android browser.) to automatically load the website URLS.";modified;modified;Real;real;real;Alexa top 500 U.S. websites February 2013;alexa/top500;alexa;No;No;Original website/Traces;original;"- 3G HSPA+ network
+- a corporate Wi-Fi network,";wifi(real), 3g(real);wifi, 3g;"App on mobile phone UbiDump: mobile device and precisely reconstructs all web transfers carried
 by HTTP, HTTPS, and SPDY [9] from captured tcpdump traces. enables cross-layer analysis that cannot
 be performed by a browser-based data collection approach.
 
 - Radio Energy Model
 We leverage two smartphone radio energy
-models: the UMTS/HSPA model [28] and the LTE model [22].","custom, enerconsum/software",No?,Page load,pageload,All of them,all,"Both
+models: the UMTS/HSPA model [28] and the LTE model [22].";custom, enerconsum/software;No?;Page load;pageload;All of them;all;"Both
 - a cold-cache load where all caches (DNS/SSL/web content cache
 caches) are cleared before loading,
 - warm-cache load right
-after the cold-cache load without clearing any cache.",both,470 websites,470,3 times per website per cache technique (6 runs per website),"-  It is possible that our analysis underes-
+after the cold-cache load without clearing any cache.";both;470 websites;470;<= 1000;3 times per website per cache technique (6 runs per website);6;"-  It is possible that our analysis underes-
 timates the complexity of today’s mobile web pages since landing
 pages can be simple (e.g., Facebook login page). However, it is
 difficult to identify “simple” web pages due to a lack of objective
@@ -550,30 +701,30 @@ studied due to the importance of landing pages described early.
 
 - Limitaiton: Limitations. We describe cases where UbiDump cannot decrypt
 SSL traffic from the packet trace.
-",low generalizability
-NGMAST_2015,Refining Mobile Web Design for Reducing Energy Consumption of Mobile Terminals,Energy consumption,enerconsum,mAs,enerconsum/mAs,No,no,Descriptive statistics,descstats,"Smartphone
-- Nexus S",smartphone,Android 4.0.4,adroid/4/4.0,Not provided,not provided,"Both
+";low generalizability;;
+P19;2015;NGMAST_2015;Refining Mobile Web Design for Reducing Energy Consumption of Mobile Terminals;Energy consumption;enerconsum;mAs;enerconsum/mAs;No;no;Descriptive statistics;descstats;"Smartphone
+- Nexus S";smartphone;Android 4.0.4;adroid/4/4.0;adroid/4/4.0;Not provided;not provided;not provided;"Both
 - Real (New york times mobile website)
-- Synthetic (converting imgs for example, blank pages for scrolling etc.)","real, synthetic","New york times mobile site
-web pages of The University of Electro-Communications (http://www.uec.ac.jp/eng/),",nosource,nosource,Yes,Yes,Presumably own server but not explicitely mentioned,not provided,WiFi,wifi(real),"PowerBooter, an automated power: model construction technique that uses built-in battery voltage sensors and knowledge of battery discharge behavior to monitor power consumption while explicitly controlling the power management and activity states of individual components
+- Synthetic (converting imgs for example, blank pages for scrolling etc.)";real, synthetic;both;"New york times mobile site
+web pages of The University of Electro-Communications (http://www.uec.ac.jp/eng/),";nosource;nosource;Yes;Yes;Presumably own server but not explicitely mentioned;not provided;WiFi;wifi(real);wifi;"PowerBooter, an automated power: model construction technique that uses built-in battery voltage sensors and knowledge of battery discharge behavior to monitor power consumption while explicitly controlling the power management and activity states of individual components
 - ADB
-- page is analyzed using tPacketCapture",enerconsum/software/powerbooter,No?,"Both
-Page load + usage scenario (scrolling)",both,All of them,all,Not provided,notprovided,"Separate experiments:/different variations:
-13 (2 + 4 + 1 + 2 + 4)",13,10,Not really provided,not provided
-TMA_2020,Need for Mobile Speed: A Historical Analysis of Mobile Web Performance,Speed,speed,"- Page load time (PLT)
+- page is analyzed using tPacketCapture";enerconsum/software/powerbooter;No?;"Both
+Page load + usage scenario (scrolling)";both;All of them;all;Not provided;notprovided;"Separate experiments:/different variations:
+13 (2 + 4 + 1 + 2 + 4)";13;<= 50;10;10;Not really provided;not provided;;
+P20;2020;TMA_2020;Need for Mobile Speed: A Historical Analysis of Mobile Web Performance;Speed;speed;"- Page load time (PLT)
 - Speedindex
-- Time-To-Interactive (TTI)","speed/plt/ms, speed/si/ms, speed/tti/ms","Yes, they share their code and data
-https://www.github.com/jnejati/tma2020",yes/code_data,"- Descriptive statistics
+- Time-To-Interactive (TTI)";speed/plt/ms, speed/si/ms, speed/tti/ms;"Yes, they share their code and data
+https://www.github.com/jnejati/tma2020";yes/data_code;"- Descriptive statistics
 - hypothesis testing
-Mention that conclusions are confirmed by t-tests.","descstats, hyptest","Smartphone
+Mention that conclusions are confirmed by t-tests.";descstats, hyptest;"Smartphone
 Reported RAM numbers dont make sense really... Probably mixed up with storage capacity
 - Nexus 4 (, Quad-core 1.5 GHz Krait, 8GB ram)
 - Nexus 5 (Quad-core 2.3 GHz Krait 400, 16GB)
 - Nexus 6P (4x1.55 GHz Cortex-A53 &4x2.0 GHz Cortex-A57, 32GB)
-- Nexus 6P (4x1.55 GHz Cortex-A53 & 4x2.0 GHz Cortex-A57. 32GB)",smartphone,"- Android 4
+- Nexus 6P (4x1.55 GHz Cortex-A53 & 4x2.0 GHz Cortex-A57. 32GB)";smartphone;"- Android 4
 - Android 5
 - Android 6
-- Android 7","adroid/4, adroid/5, adroid/6, adroid/7","8 different browsers
+- Android 7";adroid/4, adroid/5, adroid/6, adroid/7;adroid/4, adroid/5, adroid/6, adroid/7;"8 different browsers
 - Firefox(34, 40, 52, 61)
 - Chrome (37, 46, 53, 64)
 - Baidu (5.2, 6.2, 6.3, 6.4)
@@ -581,14 +732,14 @@ Reported RAM numbers dont make sense really... Probably mixed up with storage ca
 - Opera (22, 32, 34, 37)
 - Yandex (14.8, 15.12, 17.3, 17.4)
 - UCBrowser (10.7, 10.9.5, 12, 12.11)
-- Explore (2.5.2, 2.5.9, 2.6, 3.16)","firefox, firefox, firefox, firefox, chrome, chrome, chrome, chrome, other*24",Real/Synethic -> Internet’s Archive Wayback,real,"150 pages chosen from Alexa top 1M sites  2017.
+- Explore (2.5.2, 2.5.9, 2.6, 3.16)";firefox, firefox, firefox, firefox, chrome, chrome, chrome, chrome, other*24;firefox, chrome, other;Real/Synethic -> Internet’s Archive Wayback;real;real;"150 pages chosen from Alexa top 1M sites  2017.
 Random chose 50 pages
 -  heavy > 3MB
 - medium : 1-3MB
 - light < 1MB
-",alexa/top1m,alexa,Not provided,No,Internet Archive,original,"- using a USB cable configured in reverse tethering mode, to
+";alexa/top1m;alexa;Not provided;No;Internet Archive;original;"- using a USB cable configured in reverse tethering mode, to
 act as an Ethernet link
-- changed per experiment: avg network env for year 15, 16, 17, 18",simulated 4 times,"Custom created testbed:
+- changed per experiment: avg network env for year 15, 16, 17, 18";simulated 4 times;simulated;"Custom created testbed:
 a browser-agnostic testing framework to install different mobile
 browsers, under different Android versions, automatically visit
 URLs, and collect metrics about the page load.
@@ -598,10 +749,10 @@ URLs, and collect metrics about the page load.
 - WprGo
 - tc
 - ADB
-- Boomerang: JS framework inected in proxy to measure performance characteristics.","custom, webpagereplay, tc",Yes?,Page load,pageload,All of them,all,"Disabled
+- Boomerang: JS framework inected in proxy to measure performance characteristics.";custom, webpagereplay, tc;Yes?;Page load;pageload;All of them;all;"Disabled
  It is important for our tests that browsers do
 not load any cached contents during the page loads (i.e. we
-require “cold start” conditions).",disabled,150,150,5 runs per page,"The main design goal of our platform is to provide a
+require “cold start” conditions).";disabled;150;150;<= 1000;5 runs per page;5;"The main design goal of our platform is to provide a
 web performance measurement testbed that can automatically
 collect performance metrics across different mobile devices,
 browsers, networks, and Web pages. This framework must be
@@ -629,17 +780,17 @@ Authority (CA) to each browser’s trusted CA store.
 Note that this process must be
 repeated for every tested mobile device and, for the browsers
 with custom CA stores, for every version of each evaluated
-mobile browser",not provided
-USENIX_ATC_2016,Caching Doesn’t Improve Mobile Web Performance (Much),Speed,speed,Page Load Time (PLT),speed/plt/ms,"Yes, they share their code/apparatus: https://github.com/JamshedVesuna/telemetry",yes/code,"- Descriptive statistics
-- Mentions ""signficiantly"" but shows no P values etc.",descstats,"Tablet
+mobile browser";not provided;;
+P21;2016;USENIX_ATC_2016;Caching Doesn’t Improve Mobile Web Performance (Much);Speed;speed;Page Load Time (PLT);speed/plt/ms;Yes, they share their code/apparatus: https://github.com/JamshedVesuna/telemetry;yes/only_code;"- Descriptive statistics
+- Mentions ""signficiantly"" but shows no P values etc.";descstats;"Tablet
 - Galaxy Tab 4, (1.2 GHz quad-core CPU, 1.5GB ram)
-",tablet,Android 4.4 KitKat,adroid/4/4.4,"Google Chrome
-",chrome,Real,real,"We selected a random subset of 400 of the
-Alexa top 2000 URLs 2015 and loaded their root URL (‘/’).",alexa/top2000,alexa,Not provided,No,Webpage replay...,original,"Each web page was originally fetched over UC Berkeley’s
+";tablet;Android 4.4 KitKat;adroid/4/4.4;adroid/4/4.4;"Google Chrome
+";chrome;chrome;Real;real;real;"We selected a random subset of 400 of the
+Alexa top 2000 URLs 2015 and loaded their root URL (‘/’).";alexa/top2000;alexa;Not provided;No;Webpage replay...;original;"Each web page was originally fetched over UC Berkeley’s
 LAN, which approximates 250 Mbps down and 230 Mbps up.
-Next uses WPR archives, uses same network conditions as observed during recording",ethernet(real),"- Telemetry: to load requested URLs in the browser (as if the user is entering
+Next uses WPR archives, uses same network conditions as observed during recording";ethernet(real);ethernet;"- Telemetry: to load requested URLs in the browser (as if the user is entering
 URLs into the omnibox) and passively measuring PLT.
-- Web Page Replay (WPR): to record http requests and responses.","webpagereplay, telemtry",Yes?,Page load,pageload,All of them,all,Both,both,400,400,4 runs per page,"- Page Load Time as a Metric. When determining web
+- Web Page Replay (WPR): to record http requests and responses.";webpagereplay, telemtry;Yes?;Page load;pageload;All of them;all;Both;both;400;400;<= 1000;4 runs per page;4;"- Page Load Time as a Metric. When determining web
 page performance, we chose to focus on page load time rather
 than SpeedIndex [5] or above-the-fold time [4]. Although
 they are arguably preferable metrics (as they do a better
@@ -647,16 +798,16 @@ job of capturing the user’s perspective), these metrics are
 significantly more difficult to measure.
 - The PLT measurements taken by WPR are not necessarily consistent with PLTs
 observed on live web pages, nor are they necessarily consistent
-across multiple runs of WPR.","limitations of used metrics, measurement errors"
-WWW_2019,Web Experience in Mobile Networks: Lessons from Two Million Page Visits,Speed,speed,"- First Paint
+across multiple runs of WPR.";limitations of used metrics, measurement errors;;
+P22;2019;WWW_2019;Web Experience in Mobile Networks: Lessons from Two Million Page Visits;Speed;speed;"- First Paint
 - Page Load Time
-- RUMSpeedIndex","speed/plt/s, speed/fp/s, speed/si/s","Yes, they share their data and code to plot this data
-https://zenodo.org/record/2574157",yes/code_data,"- Descriptive statistics
+- RUMSpeedIndex";speed/plt/s, speed/fp/s, speed/si/s;"Yes, they share their data and code to plot this data
+https://zenodo.org/record/2574157";yes/data_code;"- Descriptive statistics
 - hypothesis testing using for ex: Jensen–Shannon divergence
 - correlation analysis
 - development of predictive models
 
-","descstats, hyptest, correlana, predmod","emulator
+";descstats, hyptest, correlana, predmod;"emulator
 
 MONROE platform that allows us to run measurements
 with full control of devices scattered in more than 100 locations
@@ -668,7 +819,7 @@ A node consists of:
 - PC Engines APU2D4 motherboard
 - 1 GHz 64-bit quad core AMD Geode APU.
 - • 4 GiB RAM
-- 16 GiB SDD",emulation,"Not provided, presumably Linux as they run Docker containers.",emu,"Emulation
+- 16 GiB SDD";emulation;Not provided, presumably Linux as they run Docker containers.;emu;-;"Emulation
 Monroe browsertime:
 - using either Firefox or Google-chrome in headless mode
 - to mimic a mobile device browser (by setting both the screen resolu-
@@ -676,14 +827,14 @@ tion and the user-agent accordingly) to retrieve the mobile versions
 of the visited pages.
 - Selenium NodeJS to drive the browser.
 (Firefox
-56.0.1 or Chrome 64.0.3282.186)","emu/chrome, emu/firefox",Real,real,18 webpages from Alexa top websites.,alexa,alexa,Yes,Yes,Original website,original,"(Ethernet, or the desired MBB interfaces (3g/4g), Ethernet, WIFI, 3g/4g
+56.0.1 or Chrome 64.0.3282.186)";emu, emu;emu;Real;real;real;18 webpages from Alexa top websites.;alexa;alexa;Yes;Yes;Original website;original;"(Ethernet, or the desired MBB interfaces (3g/4g), Ethernet, WIFI, 3g/4g
 - wired connectivity for those nodes operating in campus networks and connected via
 regular 100Mb/s or faster Ethernet interfaces.
-","ethernet(real), wifi(real), 3g(real), 4g(real)","-  the end of page rendering, execute a custom JavaScript
-script to collect a large number of metrics.",custom,"Yes,
-https://github.com/MONROE-PROJECT/Experiments/tree/master/experiments/monroe-browsertime",Page load,pageload,All of them,all,"Kind of disabled
+";ethernet(real), wifi(real), 3g(real), 4g(real);ethernet, wifi, 3g, 4g;"-  the end of page rendering, execute a custom JavaScript
+script to collect a large number of metrics.";custom;"Yes,
+https://github.com/MONROE-PROJECT/Experiments/tree/master/experiments/monroe-browsertime";Page load;pageload;All of them;all;"Kind of disabled
 They call visiting all 18 pages for a specific browser/network combo a run.
-After that they clean the cache. And do it again.",disabled,18,18,4,"Limitations:
+After that they clean the cache. And do it again.";disabled;18;18;<= 50;4;4;"Limitations:
 - end-user experience is strongly correlated with the device of the
 end-user [24, 43], especially for web browsing. Our design aims to
 remove device bias and capture a wide geographical footprint with
@@ -716,30 +867,30 @@ how much of the ""above-the-fold"" content is visually complete until
 the web page has finished loading, it also has a series of limitations.
 Specifically, it only works for browsers that support Resource Tim-
 ings, it does not handle content within iframes and does better for
-Chrome which supports reporting a ""first paint"" event.","low generalizability, limitations of used metrics"
-mobilesoft_2017,Assessing the Impact of Service Workers on the Energy Efficiency of Progressive Web Apps,Energy Consumption,enerconsum,Joules (J),enerconsum/joules,"Yes, containing raw data, code, README etc
+Chrome which supports reporting a ""first paint"" event.";low generalizability, limitations of used metrics;;
+P23;2017;mobilesoft_2017;Assessing the Impact of Service Workers on the Energy Efficiency of Progressive Web Apps;Energy Consumption;enerconsum;Joules (J);enerconsum/joules;"Yes, containing raw data, code, README etc
 http://s2group.cs.vu.nl/PWA2017ReplicationPackage
-However it returns a 404 right now",yes/code_data_instructions,"- Descriptive statistics,
+However it returns a 404 right now";yes/instructions_data_code;"- Descriptive statistics,
 - development of predictive models
 - hypothesis testing.
-","descstats, hyptest, predmod","Smartphone
+";descstats, hyptest, predmod;"Smartphone
 - Huawei Nexus 6P (Qualcomm Snapdragon 810, 2GHz 8 core, 3GB ram)
-- LG G2 (Qualcomm Snapdragon 800, 2.3GHZ, 4core, 2GB ram)",smartphone,"-Android 6.0
-- Android 4.4","adroid/6, adroid/4/4.4",Google Chrome,chrome,"5/7 are Real
-2/7 are experimental/unoffocial","real, synthetic",pseudo-randomly selected  from a repository of PWAs (https://pwa.rocks).,list,list,Yes,Yes,"Mirrored
+- LG G2 (Qualcomm Snapdragon 800, 2.3GHZ, 4core, 2GB ram)";smartphone;"-Android 6.0
+- Android 4.4";adroid/6, adroid/4/4.4;adroid/6, adroid/4/4.4;Google Chrome;chrome;chrome;"5/7 are Real
+2/7 are experimental/unoffocial";real, synthetic;both;pseudo-randomly selected  from a repository of PWAs (https://pwa.rocks).;list;list;Yes;Yes;"Mirrored
 PC will act as a server from which mobile device will
-request the PWA",mirrored,"Simulated:
+request the PWA";mirrored;"Simulated:
 - 2G
-- WiFi","wifi(emu), 2g(emu)","- Trepn Power Profiler
+- WiFi";wifi(emu), 2g(emu);wifi, 2g;"- Trepn Power Profiler
 - Fiddler Proxy software
 - Monkeyrunner 8 tool
-that orchestrates the scenario execution","enerconsum/software/trepn, proxy/fiddler",No?,"Usage Scenario:
+that orchestrates the scenario execution";enerconsum/software/trepn, proxy/fiddler;No?;"Usage Scenario:
 During the experiment, we
 automatically performed a series of tap and/or gesture paths for
 each app in order to simulate the average user behavior on the
 subject and represent the app test scenario. Each series consists
 of roughly 10-15 commands. For each possible combination of
-treatments 8 measurements are conducted.",usagescenarios,Javascript (service workers),javascript,Disabled,disabled,7 PWAs,7,8 runs,"- Moreover, due to resources constraints, we had to restrict
+treatments 8 measurements are conducted.";usagescenarios;Javascript (service workers);javascript;Disabled;disabled;7 PWAs;7;<= 10;8 runs;8;"- Moreover, due to resources constraints, we had to restrict
 the set of mobile devices used in the experiment to two
 specific devices (i.e., LG G2 and the Nexus 6P), potentially
 impacting the generalization of our results to the whole set of
@@ -772,22 +923,22 @@ bandwidth of average 2G connection. However, on mobile
 devices different chips (different radios) take care of WiFi and
 cellular connections. This might have had a small effect on the
 energy consumption of a device.Another treatment that may
-have an effect on PWAs is disabling the service worker",low generalizability
-mobilesoft_2020,Evaluating the Impact of Caching on the Energy Consumption and Performance of Progressive Web Apps,"Energy Consumption
-Speed","enerconsum, speed","Joules (J)
-Page load time (PLT)","enerconsum/joules, speed/plt/s","Yes, containing raw data, code, README etc
-https://github.com/S2-group/mobilesoft-2020-caching-pwa-replication-package",yes/code_data_instructions,"- Descriptive statistics,
+have an effect on PWAs is disabling the service worker";low generalizability;;
+P24;2020;mobilesoft_2020;Evaluating the Impact of Caching on the Energy Consumption and Performance of Progressive Web Apps;"Energy Consumption
+Speed";enerconsum, speed;"Joules (J)
+Page load time (PLT)";enerconsum/joules, speed/plt/s;"Yes, containing raw data, code, README etc
+https://github.com/S2-group/mobilesoft-2020-caching-pwa-replication-package";yes/instructions_data_code;"- Descriptive statistics,
 - hypothesis testing.
-- effect size estimation","descstats, hyptest, effsize","Smartphone (given the screen size)
-- Qualcomm SDM845 Snapdragon 845 (10 nm), Octa-core (4x2.5 GHz & 4x1.6 GHz Kryo 385), Adreno 630, 4GB)",smartphone,Android 9.0 (Pie),adroid/9,"Mozilla Firefox browser
-(version 68.1.1)",firefox,Real,real,"PWA Rocks,
+- effect size estimation";descstats, hyptest, effsize;"Smartphone (given the screen size)
+- Qualcomm SDM845 Snapdragon 845 (10 nm), Octa-core (4x2.5 GHz & 4x1.6 GHz Kryo 385), Adreno 630, 4GB)";smartphone;Android 9.0 (Pie);adroid/9;adroid/9;"Mozilla Firefox browser
+(version 68.1.1)";firefox;firefox;Real;real;real;"PWA Rocks,
 Awesome PWA 4
 on-line article on a technical blog
-Then selection procedure was applied",list,list,Yes,Yes,"Mirrored
-PWAs are hosted on the laptop,",mirrored,- WiFi (100Mbps),wifi(real),"- Android Runner
+Then selection procedure was applied";list;list;Yes;Yes;"Mirrored
+PWAs are hosted on the laptop,";mirrored;- WiFi (100Mbps);wifi(real);wifi;"- Android Runner
 - dumpsys with batterystats option
 - ADB
-- snippet of JS code to measure PLT","androidrunner, enerconsum/software/batstats",Yes?,Page load,pageload,All of them,all,Both as its the independent variable,both,9 PWAs,9,20 times,"- This threat corre-
+- snippet of JS code to measure PLT";androidrunner, enerconsum/software/batstats;Yes?;Page load;pageload;All of them;all;Both as its the independent variable;both;9 PWAs;9;<= 10;20 times;20;"- This threat corre-
 sponds to using unrealistic environment settings and resources. To
 mitigate this threat, we used a relatively modern mobile device and
 connected it via WiFi - a usual setting when users browse PWAs.
@@ -823,38 +974,38 @@ only, and (iii) the type and amount of I/O operations performed
 behind the lines by the browser.
 
 - A possible extension of this experiment is to investigate this
-phenomenon in the wild","low generalizability, controlled"
-WWW_2012,Who killed my battery: Analyzing mobile browser energy consumption,Energy Consumption,enerconsum,Energy (Joules (J)),enerconsum/joules,No,no,"- Descriptive statistics
-- Mentions ""signficiantly"" but shows no P values etc.",descstats,"Smartphone
-- Android Developer Phone 2",smartphone,"Not provided
-Google says Android 1.6",adroid/1/1.6,Modified default Android browser,modified/nativeandroid,"Real
-Synthetic (commenting out certain components to see how it impacts the energy consumption)","real, synthetic",Developed one webapp that uses the 3 communication protocols,"not provided, just choses them.",nosource,Yes,Yes,"Mirrored
+phenomenon in the wild";low generalizability, controlled;;
+P25;2012;WWW_2012;Who killed my battery: Analyzing mobile browser energy consumption;Energy Consumption;enerconsum;Energy (Joules (J));enerconsum/joules;No;no;"- Descriptive statistics
+- Mentions ""signficiantly"" but shows no P values etc.";descstats;"Smartphone
+- Android Developer Phone 2";smartphone;"Not provided
+Google says Android 1.6";adroid/1/1.6;adroid/1/1.6;Modified default Android browser;modified;modified;"Real
+Synthetic (commenting out certain components to see how it impacts the energy consumption)";real, synthetic;both;Developed one webapp that uses the 3 communication protocols;not provided, just choses them.;nosource;Yes;Yes;"Mirrored
 
 Downloaded and saved in a re-
-mote server running Apache web server..",mirrored,3G connection,3g(real),"- Agilent 34410A [1] high-precision digital power multimeter
+mote server running Apache web server..";mirrored;3G connection;3g(real);3g;"- Agilent 34410A [1] high-precision digital power multimeter
 - Custom browser
 - Profiler, app they wrote themselves: which runs on the mobile device, starts the browser and logs the required information. 
 - server that automates and orchestrates the measuring process with respect to the Android device and the multimeter.
-","enerconsum/hardware/multimeter, custom",No,Page load,pageload,All of them,all,Both,both,25 + synthetic pages,25,up to 10 times,"- It would be interesting to extend these results and
+";enerconsum/hardware/multimeter, custom;No;Page load;pageload;All of them;all;Both;both;25 + synthetic pages;25;<= 50;up to 10 times;10;"- It would be interesting to extend these results and
 study the energy signature of an entire browsing session at a site
 where the user moves from page to page at that site.
 
 - Another interesting direction is to more accurately model the en-
 ergy consumption of the 3G radio as the browser fetches web pages.
 Our model from Section 2.5 works well for web pages with a lim-
-ited number of components, but breaks down for other pages.","measurement errors, low generalizability"
-WWW_2016,An In-depth study of Mobile Browser Performance,Speed,speed,- Page load time,speed/plt/ms,No,no,"- Descriptive statistics
-- Mentions ""signficiantly"" but shows no P values etc.",descstats,"Smartphone
+ited number of components, but breaks down for other pages.";measurement errors, low generalizability;;
+P26;2016;WWW_2016;An In-depth study of Mobile Browser Performance;Speed;speed;- Page load time;speed/plt/ms;No;no;"- Descriptive statistics
+- Mentions ""signficiantly"" but shows no P values etc.";descstats;"Smartphone
 - two Samsung Galaxy S4 phones each with 2GB of RAM powered by a 1.9 GHz Quad-core Krait 300 CPU
-- Also some experiments with a Galaxy S6.",smartphone,"Android KitKat
-Android Lollipop","adroid/4/4.4, adroid/4/4.4, adroid/5","WProf-M, which is based on Android Chromium Version 31.0.1626.0. (4191LOC difference)",modified/chrome,- Real,real,"- We randomly
+- Also some experiments with a Galaxy S6.";smartphone;"Android KitKat
+Android Lollipop";adroid/4/4.4, adroid/4/4.4, adroid/5;adroid/4/4.4, adroid/4/4.4, adroid/5;WProf-M, which is based on Android Chromium Version 31.0.1626.0. (4191LOC difference);modified;modified;- Real;real;real;"- We randomly
 chose 40% of the Web pages from the top 200 Websites in Alexa [1],
 30% from the pages from the bottom of Alexa’s 1 million Websites,
-and the remaining 30% from news Websites on Alexa.","alexa/top200, alexa/top1m, alexa/news",alexa,No,No,"Mirrored
+and the remaining 30% from news Websites on Alexa.";alexa/top200, alexa/top1m, alexa/news;alexa;No;No;"Mirrored
 
 we perform additional experiments where the
 three restrictions are removed; i.e., we load pages directly from the
-Web server, we load mpages, and we use real networks.",mirrored,"emulating different network conditions using a traffic con-
+Web server, we load mpages, and we use real networks.";mirrored;"emulating different network conditions using a traffic con-
 troller
 - 6 different
 network profiles: bandwidth-delay:
@@ -873,9 +1024,9 @@ Wifi:
 
 we perform additional experiments where the
 three restrictions are removed; i.e., we load pages directly from the
-Web server, we load mpages, and we use real networks.","wifi(emu), 3g(emu), 4g(emu)","- Wprof-M
+Web server, we load mpages, and we use real networks.";wifi(emu), 3g(emu), 4g(emu);wifi, 3g, 4g;"- Wprof-M
 - Linux Traffic Control (TC).
-- Custom created testbed","wprof-m, tc, custom",Yes,Page load,pageload,All of them,all,Not provided,notprovided,200 webpages,200,Not provided,"- First, the PLT metric does not take into account scrolling speeds, refresh rates,
+- Custom created testbed";wprof-m, tc, custom;Yes;Page load;pageload;All of them;all;Not provided;notprovided;200 webpages;200;<= 1000;Not provided;not provided;"- First, the PLT metric does not take into account scrolling speeds, refresh rates,
 and other user-perceived Quality of Experience metrics. These are
 outside the scope of this work.
 
@@ -885,22 +1036,999 @@ network variance. By controlling the network, we lose the network
 variances seen in real environments.
 
 - Finally, our findings are specific to the version of the Chromium
-browsers we choose. We","limitations of used metrics, low generalizability"
-IJPAIST_2008,Measuring AJAX Performance on a GPRS Mobile Platform,"speed (response time), bandwidth","speed, bandwidth","-bytes
-- response time (ms)","bandwidth/bytes, speed/responsetime/ms",No,no,Descriptive statistics,descstats,"Opera Mobile 8.65 for Windows
-Mobile 5/6 PPC running in a Windows Mobile 6 emulator.",emulation,Emulated windows phone,emu,Opera Mobile 8.65,opera,synthetic,synthetic,developed it themselves,selfcreated,selfcreated,Not applicable (synthetic),synthetic,Hosted on a Internet Information Services 6.0,not applicable,"GPRS (General Packet Radio Service)
-",GPRS(real),"Microsoft Log Parser 2.2 and system logs were active in IIS so all traffic going to and from the Web
-server was recorded in the system log",serverlogs,No,page load,pageload,all of them,all,Not provided,notprovided,2 an ajax version and a non ajax version,2,Not provided,"- only tested on one GPRS network, and only one mobile device
-- the web application’s functionality is very limited,",low generalizability
-TEMU_2012,Evaluation of Techniques for web 3D Graphics Animation on Portable Devices,"- energy consumption
+browsers we choose. We";limitations of used metrics, low generalizability;;
+P27;2008;IJPAIST_2008;Measuring AJAX Performance on a GPRS Mobile Platform;speed (response time), bandwidth;speed, bandwidth;"-bytes
+- response time (ms)";bandwidth/bytes, speed/responsetime/ms;No;no;Descriptive statistics;descstats;"Opera Mobile 8.65 for Windows
+Mobile 5/6 PPC running in a Windows Mobile 6 emulator.";emulation;Emulated windows phone;emu;-;Opera Mobile 8.65;opera;opera;synthetic;synthetic;synthetic;developed it themselves;selfcreated;selfcreated;Not applicable (synthetic);synthetic;Hosted on a Internet Information Services 6.0;not applicable;"GPRS (General Packet Radio Service)
+";GPRS(real);GPRS;"Microsoft Log Parser 2.2 and system logs were active in IIS so all traffic going to and from the Web
+server was recorded in the system log";serverlogs;No;page load;pageload;all of them;all;Not provided;notprovided;2 an ajax version and a non ajax version;2;<= 10;Not provided;not provided;"- only tested on one GPRS network, and only one mobile device
+- the web application’s functionality is very limited,";low generalizability;;
+P28;2012;TEMU_2012;Evaluation of Techniques for web 3D Graphics Animation on Portable Devices;"- energy consumption
 - memory consumption
-- latency in graphic displays","enerconsum, memconsum","Millivolts
+- latency in graphic displays";enerconsum, memconsum;"Millivolts
 MB for memory
-ms for latency","enerconsum/mVs, memconsum/mb, speed/latency/mcs",No,no,Descriptive statistics,descstats,"Smartphone:
-LG Optimus P970",smartphone,Android v2.3.4,adroid/2/2.3.4,Firefox browser,firefox,Synthetic,synthetic,Developed 3 different webapps,selfcreated,selfcreated,Not applicable (synthetic),synthetic,"- Apache web server.
+ms for latency";enerconsum/mVs, memconsum/mb, speed/latency/mcs;No;no;Descriptive statistics;descstats;"Smartphone:
+LG Optimus P970";smartphone;Android v2.3.4;adroid/2/2.3.4;adroid/2/2.3.4;Firefox browser;firefox;firefox;Synthetic;synthetic;synthetic;Developed 3 different webapps;selfcreated;selfcreated;Not applicable (synthetic);synthetic;"- Apache web server.
 - Tomcat server is used to run the Java Web Service (Axis2) that
-exports the rendered frames. F",not applicable,Wifi,wifi(real),"we developed a lightweight Java application to perform
+exports the rendered frames. F";not applicable;Wifi;wifi(real);wifi;"we developed a lightweight Java application to perform
 the measurement tasks in Android SmartPhones
--  Chrome(they run the same webapp on a desktop) Timeline panel","custom, chrome",No,"Pageload only: However, we have not considered user interaction in our
-experimentation",pageload,Javascript parimarily,javascript,"we disabled the cache of the browser to assure
-that the delivered content is always used.",disabled,3 different technologies,3,Not provided,Not provided,not provided
+-  Chrome(they run the same webapp on a desktop) Timeline panel";custom, chrome;No;"Pageload only: However, we have not considered user interaction in our
+experimentation";pageload;Javascript parimarily;javascript;"we disabled the cache of the browser to assure
+that the delivered content is always used.";disabled;3 different technologies;3;<= 10;Not provided;not provided;Not provided;not provided;;
+P29;2021;INFOCOM_2021;WebMythBusters: An In-depth Study of Mobile Web Experience;Speed;speed;mean opinion score (MOS), user-perceived page load time (uPLT);speed/uplt/ms, qoe/mos/likert;No;no;Descriptive statistics;descstats;users employ directly on their devices;smartphone;Mixed;mixed;mixed;Kiwi browser, a modified chrome with extensions;modified;modified;Real;real;real;five popular websites;not provided, just choses them.;nosource;No;Yes;Original websites;original;Not provided;not provided;not provided;WebMythBusters should record data related to the experience of the users, i.e., the participants in the experiment. The participants are asked to answer a survey regarding the uPLT and the MOS. WebMythBusters collects data on user- generated scroll events and collects device information such as screen resolutions. Note that WebMythBusters does not collect any sensitive data, such as web history and personal information.;custom;No;page load;pageload;All of them;all;Not provided;notprovided;60 pages;60;<= 100;Not provided;not provided;We certainly need new metrics that can measure the user experience accurately in the mobile web environment.;limitations of used metrics;;
+P30;2021;IEEE_Trans_Mobile_Comput_2021;Characterizing Embedded Web Browsing in Mobile Apps;Speed;speed;page load time;speed/plt/ms;Yes, they share their code/apparatus: https://github.com/pkuoslab/EWProfiler;yes/only_code;Descriptive statistics;descstats;Nexus 5 smartphone (2.3GHz, 2GB RAM, and 16GB ROM);smartphone;Android 7.0;adroid/7;adroid/7;In-app Browser;nativeadroid;nativeadroid;Real;real;real;top 100 apps from Google Play and the top 100 apps from Wandoujia , found 39 embedded Web pages from 22 Google Play apps, and 406 embedded Web pages from 77 Wandoujia apps;list;list;No;No;Original websites;original;The Nexus 5 smartphone was connected to a wireless router for home use, and the router was connected to the Inter- net by Ethernet. The Internet connection was a broadband connection with 200Mbps bandwidth. The distance between the smartphone and the router was roughly 5 meters and no obstacle can be found on the straight line between the smartphone and the router. We think that this environment setup can well simulate the ordinary indoor environment.;wifi(real);wifi;"
+EWProfiler measures the page load time (PLT) of both embedded Web pages and native activities, to compare the performance of mobile apps with and without embedded Web pages. The PLT of the embedded Web pages is defined by the time to the onload event. The page collector ports the Chrome debugging tools that provide the information about the onload event.";custom;Yes;page load;pageload;All of them;all;or each embedded Web page, we first used EWProfiler to replay the script to load the embedded Web page, and collected the network trace. We then used EWProfiler to replay the script again without clearing the cache, and collected the network trace.;both;39 embedded Web pages from 22 Google Play apps, and 406 embedded Web pages from 77 Wandoujia apps;445;<= 1000;3 runs;3;Not provided;not provided;;
+P31A;2018;IEEE_Trans_Mobile_Comput_2018;A Tale of Two Fashions: An Empirical Study on the Performance of Native Apps and Web Apps on Android; requests, response time, data drain, and energy consumption.;speed, enerconsum, bandwidth;number of HTTP(S) requests, traffic volume, response time, and energy. ;numrequests/count, bandwidth/bytes, speed/responsetime/ms, enerconsum/mVs;We have released the dataset on our website at http://sei.pku. edu.cn/$mayun11/NativeWeb, including the details of features and measurement results;yes/only_data;Descriptive statistics;descstats; two smartphones of the same device model. The selected device model is Samsung Galaxy S4 with 2 GB RAM and Android 4.2 OS (directly downloaded from Google rather than using the manufacturer customized ROM).;smartphone;Android 4.2;adroid/4/4.2;adroid/4/4.2;"For each service provider, we install and access the native app on one smartphone, and open the Web app within Chrome Browser of version 40.0.2214.89 on the other smartphone. 
+";chrome;chrome;Real;real;real;from 12 popular service providers, including Facebook, Amazon Shopping, Google Map, Baidu Map, Sina Weibo, Dia- nping, Gewala Movie, Jd, Maoyan Movie, Meituan, Zhihu, and Douban;not provided, just choses them.;nosource;No;No;Original websites;original;The two smartphones are connected to the same Wi-Fi network, and are “rooted” with the system-level privi- lege. ;wifi(real);wifi;We deploy a proxy server which runs both the WireShark and the popular HTTP/HTTPS-level proxy called Fiddler. Also uses a Monsoon Power Monitor;proxy/fiddler, proxy/wireshark, enerconsum/hardware;Yes, they provide the source of their tool;Page load;pageload;All of them;all;Both - As the cache mechanism is widely used in both native apps and Web apps [20], we also request each feature of the targeted Web services in two modes, Without Cache and With Cache.;both;we choose 260 features involving 328 dis- tinct Web services3. ;notprovided;not provided;3 runs;3;. To overcome this threat, we download the .apk files of the versions of native apps evaluated in our arti- cle. Practitioners could use these files to reproduce the experiments described in this article. However, the Web apps cannot be treated in the same way.  The most considerable concern of our empirical study is the validity of findings on the native and Web apps from other service providers that are not covered in this article.;not reproducibility, generalizability;;
+P31B;2015;IEEE_Int_Conf_Web_Ser_2015;Characterizing restful web services usage on smartphones: A tale of native apps and web apps; requests, response time, data drain, and energy consumption.;speed, enerconsum, bandwidth;number of HTTP(S) requests, traffic volume, response time, and energy. ;numrequests/count, bandwidth/bytes, speed/responsetime/ms, enerconsum/mVs;We have released the dataset on our website at http://sei.pku. edu.cn/$mayun11/NativeWeb, including the details of features and measurement results;yes/only_data;Descriptive statistics;descstats; two smartphones of the same device model. The selected device model is Samsung Galaxy S4 with 2 GB RAM and Android 4.2 OS (directly downloaded from Google rather than using the manufacturer customized ROM).;smartphone;Android 4.2;adroid/4/4.2;adroid/4/4.2;"For each service provider, we install and access the native app on one smartphone, and open the Web app within Chrome Browser of version 40.0.2214.89 on the other smartphone. 
+";chrome;chrome;Real;real;real;from 12 popular service providers, including Facebook, Amazon Shopping, Google Map, Baidu Map, Sina Weibo, Dia- nping, Gewala Movie, Jd, Maoyan Movie, Meituan, Zhihu, and Douban;not provided, just choses them.;nosource;No;No;Original websites;original;The two smartphones are connected to the same Wi-Fi network, and are “rooted” with the system-level privi- lege. ;wifi(real);wifi;We deploy a proxy server which runs both the WireShark and the popular HTTP/HTTPS-level proxy called Fiddler. Also uses a Monsoon Power Monitor;proxy/fiddler, proxy/wireshark, enerconsum/hardware;Yes, they provide the source of their tool;Page load;pageload;All of them;all;Both - As the cache mechanism is widely used in both native apps and Web apps [20], we also request each feature of the targeted Web services in two modes, Without Cache and With Cache.;both;we choose 260 features involving 328 dis- tinct Web services3. ;notprovided;not provided;3 runs;3;. To overcome this threat, we download the .apk files of the versions of native apps evaluated in our arti- cle. Practitioners could use these files to reproduce the experiments described in this article. However, the Web apps cannot be treated in the same way.  The most considerable concern of our empirical study is the validity of findings on the native and Web apps from other service providers that are not covered in this article.;not reproducibility, generalizability;;
+P32;2021;HotMobile_2021;WebMedic: Disentangling the Memory–Functionality Tension for the Next Billion Mobile Web Users;Memory;memconsum;We quantify the memory footprint of a web- site by measuring the increase in device’s memory usage, captured through dumpsys [15] which measures memory usage as the differ- ence of MemAvailable from TotalMemory.;memconsum/memfootprint/mb;No;no;Descriptive statistics;descstats;Our testbed comprises of three phones: LG G5 (high-end, 4GB RAM, 2x2.15, 2x1.6 GHz CPU, 5.3in screen), QMobile Q Infinity B (low-end, 1GB RAM, Quad-core 4x1.2 GHz CPU, 4.95in screen), and Nokia 2 (low-end, 4x1.3 GHz, 5in screen);smartphone;The devices run the vendor’s Android OS distribution and ADB is used to automate any activity;adroid/6/6.0, adroid/7/7.0, adroid/7/7.1 ;adroid/6/6.0, adroid/7/7.0, adroid/7/7.1 ; Chrome v69.0 is used for the measurements,;chrome;chrome;Real;real;real;We measure Alexa top 50 websites from 5 countries: Egypt, Nigeria, Pakistan, U.S., and U.K. (250 websites in total).;alexa/top50;alexa;Not provided;No;To ensure re-producibility, we use mitmproxy [11](a popular record-and-replay tool) to record regional webpages and later replay them to devices.;mirrored;The last-mile link (i.e., the device access link) is set to 100Mbps, 20ms RTT during replay;wifi(real);wifi;We quantify the memory footprint of a web- site by measuring the increase in device’s memory usage, captured through dumpsys, We measure two user-centric utility metrics for the webpage’s JS: (i) functionality, e.g., event listener attached to a button by JS, and (ii) appearance. The number of event listeners added by JS to the DOM quantifies the former (measured using Time- line Profile [21]), while taking a screen-shot of the initial view-port of a fully rendered page and generating a fingerprint – Perceptual Hash or pHash [24] – measures the latter. ;memconsum/dumpsys, utility/phash, utility/numhandlers;;Page load;pageload;Javascript primarily;javascript;Each measurement is repeated thrice, and Chrome is terminated and its application cache is cleared before each trial.;disabled;not provided, main page only I believe;notprovided;not provided;3 runs;3;Not provided;not provided;;
+P33;2021;ICWE_2021;PWA vs the Others: A Comparative Study on the UI Energy-Efficiency of Progressive Web Apps;Energy consumption;enerconsum;The energy consumption is specified in milli ampere hours (mAh) of cur- rent drawn from the device battery. To be comparable to related research and to actually calculate the energy consumption, a conversion to Joule was done.;enerconsum/joules;Yes;yes/instructions_data_code;"Descriptive statistics,
+- hypothesis testing.
+- effect size estimation";descstats, hyptest, effsize;At the end, a lower end - LG Nexus 5X - and a higher-end device - Samsung Galaxy S9 - were used;smartphone;Android 8.0 and Android 10.0;adroid/8/8.0, adroid/10/10.0;adroid/8/8.0, adroid/10/10.0;Chrome and Firefox;chrome, firefox;chrome, firefox;Synthetic;synthetic;synthetic;Five different mobile apps were implemented as the subjects of the study. Each app provides exactly the same functionalities, screens and UI elements. The look and feel of all the apps is strictly based on the Google material design guidelines3 to make the implementations comparable with respect to the UI. One app was implemented using the Android SDK to serve as the native baseline. The other four apps were built using the MCPD approaches PWA, Capacitor, Flutter and React Native.;selfcreated;selfcreated;Not applicable (synthetic);synthetic;Installed on device;not applicable;Not applicable;not applicable (no network requests fired);not applicable ;Android provides the batterystats tool, which collects battery related data on a mobile phone as timestamped usage data of hardware components, such as CPU, screen or Wi-Fi.;enerconsum/software/batterystats;No?;Usage scenario: Four interaction scenarios (i1, i2, i3 and i4), which comprise UI interactions commonly used within mobile apps, were implemented.;usagescenarios;All of them;all;Not provided;notprovided;not provided;notprovided;not provided;5 times;5;There are clearly inaccuracies when esti- mating the absolute energy consumption, however, we consider it adequate for comparing different approaches as the estimations are based on the utilization of the device’s hardware components.;limitations of used metrics;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
