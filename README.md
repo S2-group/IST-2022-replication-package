@@ -30,7 +30,7 @@ If the data or software contained in this replication package is helping your re
 
 ```
 @inproceedings{IST_2022,
-  title={{Measurement-based Experiments on the Mobile Web: A Systematic Mapping Study}},
+  title={{The State of the Art in Measurement-based Experiments on the Mobile Web}},
   author={Omar {de Munk}, Gian Luca Scoccia and Ivano Malavolta},
   journal={Information and Software Technology}
   pages={To appear},
