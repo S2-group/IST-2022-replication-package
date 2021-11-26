@@ -36,6 +36,6 @@ If the data or software contained in this replication package is helping your re
   pages={To appear},
   publisher={Elsevier},
   year={2022},
-  url = {http://www.ivanomalavolta.com/files/papers/STJ_2022.pdf}
+  url = {http://www.ivanomalavolta.com/files/papers/IST_2022.pdf}
 }
 ```
