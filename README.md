@@ -1,5 +1,6 @@
 # IST-2022-replication-package
-This repository contains the replication package of the paper **The State of the Art in Measurement-based Experiments on the Mobile Web**, published at the International Conference on Evaluation and Assessment in Software Engineering (EASE 2021). 
+This repository contains the replication package of the paper **The State of the Art in Measurement-based
+Experiments on the Mobile Web**.
 
 This study has been designed, developed and reported by the folllowing investigators:
 - [Ivano Malavolta](https://www.ivanomalavolta.com) (Vrije Universiteit Amsterdam)
@@ -23,19 +24,4 @@ This replication package is organized according to the following structure:
 └── scripts
     └── plots.ipynb: Jupyter Notebook file containing the Python code used to analyze the extracted data and generate the resulting plots.
     └── [PlotName].R: R script to generate the PlotName included in the paper. 
-```
-
-## How to cite this work
-If the data or software contained in this replication package is helping your research, consider to cite it is as follows, thanks!
-
-```
-@inproceedings{IST_2022,
-  title={{The State of the Art in Measurement-based Experiments on the Mobile Web}},
-  author={Omar {de Munk}, Gian Luca Scoccia and Ivano Malavolta},
-  journal={Information and Software Technology}
-  pages={To appear},
-  publisher={Elsevier},
-  year={2022},
-  url = {http://www.ivanomalavolta.com/files/papers/IST_2022.pdf}
-}
 ```
